@@ -31,6 +31,11 @@
       "voice": "Details doge, toh better plan milega.",
       "reveal": "verdict",
       "voice_tts": "डिटेल्स दोगे, तो बेटर प्लान मिलेगा।"
+    },
+    {
+      "voice": "Aise hi aur prompts ke liye, save karo, follow karo Prompt Pandit.",
+      "voice_tts": "ऐसे ही और प्रॉम्प्ट्स के लिए, सेव करो, फ़ॉलो करो प्रॉम्प्ट पंडित।",
+      "reveal": "verdict"
     }
   ]
 }
