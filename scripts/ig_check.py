@@ -1,7 +1,12 @@
-"""Phase 0 check: read the Instagram account behind IG_ACCESS_TOKEN.
+"""Phase 0 check: confirm the token works and find the Instagram user ID.
 
-Reads IG_ACCESS_TOKEN (and optional IG_USER_ID) from the environment or a
-local .env file. Never prints the token.
+Our token is a Meta *system-user* token (Unified login, never expires).
+It may work on either API host, so we try both:
+  1. graph.instagram.com/me                  (Instagram-login style)
+  2. graph.facebook.com  -> business -> IG    (Facebook-login style)
+
+Reads IG_ACCESS_TOKEN (and optional IG_USER_ID) from env or .env.
+Never prints the token.
 
 Usage:  .venv/bin/python scripts/ig_check.py
 """
@@ -13,8 +18,53 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-API_VERSION = os.getenv("IG_API_VERSION", "v24.0")
-BASE = f"https://graph.instagram.com/{API_VERSION}"
+VER = os.getenv("IG_API_VERSION", "v24.0")
+IG_HOST = f"https://graph.instagram.com/{VER}"
+FB_HOST = f"https://graph.facebook.com/{VER}"
+FIELDS = "username,name,account_type,followers_count,media_count"
+
+
+def get(url, token, **params):
+    """GET helper. Returns (ok, json). Errors from Meta never echo the token."""
+    params["access_token"] = token
+    r = requests.get(url, params=params, timeout=30)
+    try:
+        data = r.json()
+    except ValueError:
+        data = {"error": r.text[:200]}
+    return r.status_code == 200 and "error" not in data, data
+
+
+def try_instagram_host(token):
+    ok, data = get(f"{IG_HOST}/me", token, fields="user_id," + FIELDS)
+    if ok:
+        return "graph.instagram.com", str(data.get("user_id") or data.get("id")), data
+    print("  graph.instagram.com:", data.get("error", {}).get("message", data))
+    return None
+
+
+def try_facebook_host(token, ig_id=None):
+    # If we already know the IG user ID, just read it.
+    if ig_id:
+        ok, data = get(f"{FB_HOST}/{ig_id}", token, fields="id,username,name,followers_count,media_count")  # account_type is IG-host only
+        if ok:
+            return "graph.facebook.com", str(data["id"]), data
+        print("  graph.facebook.com:", data.get("error", {}).get("message", data))
+        return None
+
+    # Otherwise walk: system user -> businesses -> Instagram accounts.
+    ok, biz = get(f"{FB_HOST}/me/businesses", token, fields="id,name")
+    if not ok:
+        print("  graph.facebook.com /me/businesses:", biz.get("error", {}).get("message", biz))
+        return None
+    for b in biz.get("data", []):
+        for edge in ("owned_instagram_accounts", "instagram_accounts"):
+            ok, accts = get(f"{FB_HOST}/{b['id']}/{edge}", token, fields="id,username")
+            if ok and accts.get("data"):
+                ig = accts["data"][0]
+                return try_facebook_host(token, ig["id"])
+    print("  graph.facebook.com: no Instagram account found via business portfolio")
+    return None
 
 
 def main() -> int:
@@ -22,30 +72,25 @@ def main() -> int:
     if not token:
         print("IG_ACCESS_TOKEN is not set (.env or environment).")
         return 1
+    known_id = os.getenv("IG_USER_ID") or None
 
-    # /me returns the account the token belongs to.
-    resp = requests.get(
-        f"{BASE}/me",
-        params={
-            "fields": "user_id,username,name,account_type,followers_count,media_count",
-            "access_token": token,
-        },
-        timeout=30,
-    )
-    data = resp.json()
-    if resp.status_code != 200:
-        # Error messages from Meta never contain the token itself.
-        print("API error:", data.get("error", data))
+    print("Trying API hosts...")
+    result = try_instagram_host(token) or try_facebook_host(token, known_id)
+    if not result:
+        print("\nCould not read the account with this token.")
         return 1
 
-    print("Connected to Instagram")
-    for key in ("username", "name", "account_type", "user_id", "followers_count", "media_count"):
-        print(f"  {key:16} {data.get(key)}")
+    host, ig_id, data = result
+    print(f"\nConnected to Instagram via {host}")
+    for key in ("username", "name", "account_type", "followers_count", "media_count"):
+        if key in data:
+            print(f"  {key:16} {data[key]}")
+    print(f"  {'IG_USER_ID':16} {ig_id}")
 
-    expected_id = os.getenv("IG_USER_ID")
-    if expected_id and expected_id != str(data.get("user_id")):
-        print(f"WARNING: IG_USER_ID in .env ({expected_id}) does not match the token's user_id.")
-        return 1
+    if known_id and known_id != ig_id:
+        print(f"WARNING: IG_USER_ID in .env ({known_id}) differs from {ig_id}.")
+    elif not known_id:
+        print("\nAdd this to .env:  IG_USER_ID=" + ig_id)
     return 0
 
 
