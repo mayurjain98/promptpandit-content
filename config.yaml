@@ -34,4 +34,12 @@ series:
 media:
   # Public raw URL base for Meta to fetch media
   raw_base: "https://raw.githubusercontent.com/mayurjain98/promptpandit-content/main"
-  tts_voice: models/piper/en_US-lessac-medium.onnx
+
+# Voiceover (free, local). Kokoro is Apache-2.0 (commercial use OK).
+# Write `voice_tts` lines in Devanagari Hinglish, e.g. "ये प्रॉम्प्ट ट्राई किया?"
+tts:
+  engine: kokoro          # kokoro | piper
+  voice: hf_alpha         # Hindi female
+  lang: hi
+  speed: 1.2              # 1.0 = normal; higher = faster
+  piper_model: models/piper/en_US-lessac-medium.onnx   # fallback only

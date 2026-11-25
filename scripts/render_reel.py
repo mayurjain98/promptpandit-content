@@ -33,21 +33,36 @@ ROOT = Path(__file__).resolve().parent.parent
 REEL_DIR = ROOT / "templates" / "reel"
 AUDIO_DIR = ROOT / "templates" / "audio"
 CONFIG = yaml.safe_load((ROOT / "config.yaml").read_text())
-VOICE_MODEL = ROOT / CONFIG["media"]["tts_voice"]
+TTS = CONFIG["tts"]
 W, H = 1080, 1920
 
 
 # ---------------------------------------------------------------- voice ----
-def tts(text: str, out: Path, length_scale: float) -> float:
-    """Synthesise one line with Piper. Returns duration in seconds."""
-    # Strip our *emphasis* markers so they are not read aloud.
-    clean = re.sub(r"[*\[\]]", "", text)
-    subprocess.run(
-        [str(ROOT / ".venv" / "bin" / "piper"), "-m", str(VOICE_MODEL), "-f", str(out),
-         "--length-scale", str(length_scale), "--sentence-silence", "0.15"],
-        input=clean.encode(), check=True, capture_output=True)
-    with wave.open(str(out)) as w:
-        return w.getnframes() / w.getframerate()
+def tts_batch(texts, outs) -> list:
+    """Synthesise all lines. Returns each clip's duration in seconds.
+
+    Engine is set in config.yaml (tts.engine):
+      kokoro  Hindi voice reading Devanagari Hinglish (default, Apache-2.0)
+      piper   fallback English voice
+    """
+    # Strip our *emphasis* / [placeholder] markers so they are not read aloud.
+    clean = [re.sub(r"[*\[\]]", "", t) for t in texts]
+    if TTS["engine"] == "kokoro":
+        jobs = [{"text": t, "out": str(o)} for t, o in zip(clean, outs)]
+        res = subprocess.run(
+            [str(ROOT / ".venv-tts" / "bin" / "python"), str(ROOT / "scripts" / "tts_kokoro.py"),
+             "--voice", TTS["voice"], "--speed", str(TTS["speed"]), "--lang", TTS["lang"]],
+            input=json.dumps(jobs).encode(), check=True, capture_output=True)
+        return json.loads(res.stdout.decode().strip().splitlines()[-1])
+    durs = []
+    for t, o in zip(clean, outs):
+        subprocess.run(
+            [str(ROOT / ".venv" / "bin" / "piper"), "-m", str(ROOT / TTS["piper_model"]), "-f", str(o),
+             "--length-scale", str(1 / TTS["speed"]), "--sentence-silence", "0.15"],
+            input=t.encode(), check=True, capture_output=True)
+        with wave.open(str(o)) as w:
+            durs.append(w.getnframes() / w.getframerate())
+    return durs
 
 
 def build_voice_track(clips, starts, total, out: Path):
@@ -122,11 +137,10 @@ def render(spec: dict, out_mp4: Path):
         tmp = Path(tmp)
 
         # 1. Voice clips
-        clips, durs = [], []
-        for i, sc in enumerate(spec["scenes"]):
-            clip = tmp / f"v{i:02d}.wav"
-            durs.append(tts(sc.get("voice_tts") or sc["voice"], clip, cfg["length_scale"]))
-            clips.append(clip)
+        # `voice_tts` = what is spoken (Devanagari Hinglish for Kokoro);
+        # `voice` = Roman Hinglish used for captions.
+        clips = [tmp / f"v{i:02d}.wav" for i in range(len(spec["scenes"]))]
+        durs = tts_batch([sc.get("voice_tts") or sc["voice"] for sc in spec["scenes"]], clips)
 
         # 2. Timeline + voice track
         tl = make_timeline(durs, cfg)
@@ -165,18 +179,23 @@ def render(spec: dict, out_mp4: Path):
         if ff.wait() != 0:
             sys.exit("FFmpeg video encode failed")
 
-        # 5. Mux: voice + low music bed, fade music at the end.
+        # 5. Mux: loud, punchy voice + low music bed, fade music at the end.
+        #    Voice: compressor (evens out quiet syllables) then loudness-normalised
+        #    to -14 LUFS, the level Instagram/YouTube play at, so it sounds loud.
+        voice_fx = (f"aresample=44100,pan=stereo|c0=c0|c1=c0,"
+                    f"acompressor=threshold=-22dB:ratio=3:attack=5:release=80:makeup=3,"
+                    f"loudnorm=I={cfg['voice_lufs']}:TP=-1.5:LRA=7,aresample=44100")
         music = pick_music(spec.get("id", "x"))
         cmd = ["ffmpeg", "-y", "-v", "error", "-i", str(silent), "-i", str(voice)]
         if music:
             fade_at = max(tl["total"] - 1.5, 0)
             cmd += ["-stream_loop", "-1", "-i", str(music), "-filter_complex",
-                    f"[1:a]aresample=44100,pan=stereo|c0=c0|c1=c0,volume={cfg['voice_volume']}[v];"
+                    f"[1:a]{voice_fx}[v];"
                     f"[2:a]aresample=44100,volume={cfg['music_volume']},afade=t=out:st={fade_at}:d=1.5[m];"
                     f"[v][m]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.95[a]",
                     "-map", "0:v", "-map", "[a]"]
         else:
-            cmd += ["-map", "0:v", "-map", "1:a", "-ac", "2"]
+            cmd += ["-filter_complex", f"[1:a]{voice_fx},alimiter=limit=0.95[a]", "-map", "0:v", "-map", "[a]"]
         cmd += ["-c:v", "copy", "-c:a", "aac", "-b:a", "160k", "-ar", "44100",
                 "-t", str(tl["total"]), "-movflags", "+faststart", str(out_mp4)]
         subprocess.run(cmd, check=True)

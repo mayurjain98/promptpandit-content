@@ -4,6 +4,7 @@
 
 # Local tooling
 .venv/
+.venv-tts/
 models/
 __pycache__/
 *.pyc

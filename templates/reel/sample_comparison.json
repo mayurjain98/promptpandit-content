@@ -7,10 +7,30 @@
   "sahi": "Make a [4-week] study plan for [SSC CGL]. I can study [2 hours] a day. Split it by topic and add a weekly revision day.",
   "verdict": "Details do. Better plan pao.",
   "scenes": [
-    {"voice": "Galat versus sahi prompt. Study plan edition.", "voice_tts": "Ghalat versus sahi prompt. Study plan edition.", "reveal": "title"},
-    {"voice": "Most people type: make me a study plan.", "reveal": "galat"},
-    {"voice": "The AI has no idea about your exam, your time, or your deadline. So you get a generic plan.", "reveal": "galat"},
-    {"voice": "Instead, give it your exam, the number of weeks, and your daily hours. Ask for topics split by week, plus a revision day.", "reveal": "sahi"},
-    {"voice": "More details in, a better plan out.", "reveal": "verdict"}
+    {
+      "voice": "Galat vs sahi prompt. Aaj: study plan.",
+      "voice_tts": "ग़लत वर्सेस सही प्रॉम्प्ट। आज: स्टडी प्लान।",
+      "reveal": "title"
+    },
+    {
+      "voice": "Zyadatar log likhte hain: make me a study plan.",
+      "reveal": "galat",
+      "voice_tts": "ज़्यादातर लोग लिखते हैं: मेक मी अ स्टडी प्लान।"
+    },
+    {
+      "voice": "AI ko na exam pata hai, na time, na deadline. Toh plan bhi generic milega.",
+      "reveal": "galat",
+      "voice_tts": "एआई को ना एग्ज़ाम पता है, ना टाइम, ना डेडलाइन। तो प्लान भी जेनेरिक मिलेगा।"
+    },
+    {
+      "voice": "Sahi tareeka: exam, weeks aur daily hours batao. Week-wise topics aur ek revision day maango.",
+      "reveal": "sahi",
+      "voice_tts": "सही तरीका: एग्ज़ाम, वीक्स और डेली आवर्स बताओ। वीक-वाइज़ टॉपिक्स और एक रिवीज़न डे मांगो।"
+    },
+    {
+      "voice": "Details doge, toh better plan milega.",
+      "reveal": "verdict",
+      "voice_tts": "डिटेल्स दोगे, तो बेटर प्लान मिलेगा।"
+    }
   ]
 }

@@ -3,12 +3,42 @@
   "style": "kinetic",
   "series": "Prompt of the Day",
   "scenes": [
-    {"voice": "Ye prompt try kiya?", "voice_tts": "Yeh prompt try kiya?", "text": "Ye prompt *try* kiya?"},
-    {"voice": "Most people ask AI one vague question and get a vague answer.", "text": "Vague question = *vague answer*"},
-    {"voice": "Instead, tell it to ask you questions first.", "kicker": "The trick", "text": "Let AI *ask you* first"},
-    {"voice": "Type: before you answer, ask me three questions to understand my goal.", "kicker": "Copy this", "text": "\"Before you answer, ask me *3 questions* to understand my goal.\""},
-    {"voice": "Answer them, and the final reply fits your exact situation.", "text": "Answer them. Get a reply that *fits you*."},
-    {"voice": "Works for resumes, study plans, and interview prep.", "text": "Resume. Study plan. *Interview prep.*"},
-    {"voice": "Save this and follow Prompt Pandit for more.", "text": "Save karo, *follow* karo"}
+    {
+      "voice": "Ye prompt try kiya?",
+      "voice_tts": "ये प्रॉम्प्ट ट्राई किया?",
+      "text": "Ye prompt *try* kiya?"
+    },
+    {
+      "voice": "Zyadatar log AI se vague sawaal poochte hain, aur jawaab bhi vague milta hai.",
+      "text": "Vague question = *vague answer*",
+      "voice_tts": "ज़्यादातर लोग एआई से वेग सवाल पूछते हैं, और जवाब भी वेग मिलता है।"
+    },
+    {
+      "voice": "Trick simple hai: AI ko pehle aapse sawaal poochne do.",
+      "kicker": "The trick",
+      "text": "Let AI *ask you* first",
+      "voice_tts": "ट्रिक सिंपल है: एआई को पहले आपसे सवाल पूछने दो।"
+    },
+    {
+      "voice": "Likho: before you answer, ask me three questions to understand my goal.",
+      "kicker": "Copy this",
+      "text": "\"Before you answer, ask me *3 questions* to understand my goal.\"",
+      "voice_tts": "लिखो: बिफ़ोर यू आंसर, आस्क मी थ्री क्वेश्चन्स टू अंडरस्टैंड माई गोल।"
+    },
+    {
+      "voice": "Jawaab do, aur final reply bilkul aapke hisaab se milega.",
+      "text": "Answer them. Get a reply that *fits you*.",
+      "voice_tts": "जवाब दो, और फ़ाइनल रिप्लाई बिल्कुल आपके हिसाब से मिलेगा।"
+    },
+    {
+      "voice": "Resume, study plan, interview prep, sab mein kaam aayega.",
+      "text": "Resume. Study plan. *Interview prep.*",
+      "voice_tts": "रिज़्यूमे, स्टडी प्लान, इंटरव्यू प्रेप, सब में काम आएगा।"
+    },
+    {
+      "voice": "Save karo, follow karo Prompt Pandit.",
+      "text": "Save karo, *follow* karo",
+      "voice_tts": "सेव करो, फ़ॉलो करो प्रॉम्प्ट पंडित।"
+    }
   ]
 }

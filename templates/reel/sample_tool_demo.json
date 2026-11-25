@@ -4,13 +4,45 @@
   "series": "Pandit ji ka Tool",
   "tool": "Gemini *Notebook*",
   "site_url": "https://notebooklm.google/",
-  "sources": ["https://notebooklm.google/"],
+  "sources": [
+    "https://notebooklm.google/"
+  ],
   "scenes": [
-    {"voice": "Pandit ji ka tool: Gemini Notebook, from Google.", "voice_tts": "Pundit ji ka tool: Gemini Notebook, from Google.", "text": "Notes se *padhai*, smart tareeke se", "scroll": 0},
-    {"voice": "Add your own notes and sources, then ask questions about them.", "text": "Sources add karo, *sawaal pucho*", "scroll": 0.2},
-    {"voice": "Its answers are grounded in the information you provide.", "text": "Answers *aapke material* se", "scroll": 0.22},
-    {"voice": "It can also make study aids, like flashcards and quizzes, from your sources.", "text": "*Flashcards* aur *quizzes*", "scroll": 0.36},
-    {"voice": "Not sure where to start? Explore its featured public notebooks.", "text": "Public notebooks *explore* karo", "scroll": 0.5},
-    {"voice": "Try it at notebook L M dot google. Save this for exam season.", "caption": "Try it at notebooklm.google. Save this for exam season.", "text": "*notebooklm.google*", "scroll": 0}
+    {
+      "voice": "Pandit ji ka tool: Google ka Gemini Notebook.",
+      "voice_tts": "पंडित जी का टूल: गूगल का जेमिनी नोटबुक।",
+      "text": "Notes se *padhai*, smart tareeke se",
+      "scroll": 0
+    },
+    {
+      "voice": "Apne notes aur sources add karo, phir unke baare mein sawaal poocho.",
+      "text": "Sources add karo, *sawaal pucho*",
+      "scroll": 0.2,
+      "voice_tts": "अपने नोट्स और सोर्सेज़ ऐड करो, फिर उनके बारे में सवाल पूछो।"
+    },
+    {
+      "voice": "Jawaab aapke diye gaye material par based hote hain.",
+      "text": "Answers *aapke material* se",
+      "scroll": 0.22,
+      "voice_tts": "जवाब आपके दिए गए मटीरियल पर बेस्ड होते हैं।"
+    },
+    {
+      "voice": "Ye aapke sources se flashcards aur quizzes jaise study aids bhi banata hai.",
+      "text": "*Flashcards* aur *quizzes*",
+      "scroll": 0.36,
+      "voice_tts": "ये आपके सोर्सेज़ से फ़्लैशकार्ड्स और क्विज़ेस जैसे स्टडी एड्स भी बनाता है।"
+    },
+    {
+      "voice": "Shuru kahan se karein? Featured public notebooks explore karo.",
+      "text": "Public notebooks *explore* karo",
+      "scroll": 0.5,
+      "voice_tts": "शुरू कहाँ से करें? फ़ीचर्ड पब्लिक नोटबुक्स एक्सप्लोर करो।"
+    },
+    {
+      "voice": "Try karo notebooklm.google par. Exam season ke liye save karo.",
+      "text": "*notebooklm.google*",
+      "scroll": 0,
+      "voice_tts": "ट्राई करो नोटबुक एल एम डॉट गूगल पर। एग्ज़ाम सीज़न के लिए सेव करो।"
+    }
   ]
 }

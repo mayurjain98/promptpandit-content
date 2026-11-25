@@ -33,6 +33,14 @@ def mean_volume(path):
     return float(m.group(1)) if m else -99.0
 
 
+def loudness_lufs(path):
+    """Integrated loudness (EBU R128). Instagram plays at about -14 LUFS."""
+    err = subprocess.run(["ffmpeg", "-i", str(path), "-af", "ebur128", "-vn", "-f", "null", "-"],
+                         capture_output=True, text=True).stderr
+    m = re.findall(r"I:\s+(-?[\d.]+) LUFS", err)
+    return float(m[-1]) if m else -99.0
+
+
 def check_reel(path: Path):
     info = probe(path)
     v = next((s for s in info["streams"] if s["codec_type"] == "video"), None)
@@ -47,6 +55,7 @@ def check_reel(path: Path):
         ("pixel format yuv420p", v and v.get("pix_fmt") == "yuv420p", v.get("pix_fmt") if v else "-"),
         ("audio AAC present", a and a["codec_name"] == "aac", a["codec_name"] if a else "none"),
         ("audio audible", vol > -35, f"mean {vol:.1f} dB"),
+        ("loudness -17..-11 LUFS", a and -17 <= (lufs := loudness_lufs(path)) <= -11, f"{lufs:.1f} LUFS" if a else "-"),
         ("duration 3-90 s", 3 <= dur <= 90, f"{dur:.1f}s"),
         ("duration target 20-45 s", 20 <= dur <= 45, f"{dur:.1f}s"),
         ("fps 23-60", 23 <= fps <= 60, f"{fps:g}"),
