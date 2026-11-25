@@ -1,0 +1,32 @@
+# Monthly: delete media files of posts published 30+ days ago (logs are kept).
+# 1st of each month, 20:30 UTC = 02:00 IST
+name: Cleanup
+
+on:
+  schedule:
+    - cron: "30 20 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-commit
+  cancel-in-progress: false
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Delete old media
+        run: python3 scripts/cleanup.py --days 30
+      - name: Commit
+        run: |
+          git config user.name "promptpandit-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A content/published
+          if git diff --cached --quiet; then echo "Nothing to clean."; exit 0; fi
+          git commit -m "Monthly cleanup $(date -u +%Y-%m)"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done

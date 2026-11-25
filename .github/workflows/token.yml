@@ -1,0 +1,31 @@
+# Weekly: check the Instagram token is valid and has the right permissions.
+# (It's a system-user token that never expires, so there's nothing to refresh.
+#  If it's ever revoked or loses permissions, this opens a GitHub Issue.)
+# Monday 03:30 UTC = 09:00 IST
+name: Token check
+
+on:
+  schedule:
+    - cron: "30 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  token:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests pyyaml
+      - name: Check token
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/token_check.py
