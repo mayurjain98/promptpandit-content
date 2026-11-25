@@ -39,7 +39,7 @@ media:
 # Write `voice_tts` lines in Devanagari Hinglish, e.g. "ये प्रॉम्प्ट ट्राई किया?"
 tts:
   engine: kokoro          # kokoro | piper
-  voice: hf_alpha         # Hindi female
+  voice: hm_psi           # Hindi male (chosen by owner)
   lang: hi
-  speed: 1.2              # 1.0 = normal; higher = faster
+  speed: 1.35             # 1.0 = normal; higher = faster
   piper_model: models/piper/en_US-lessac-medium.onnx   # fallback only
