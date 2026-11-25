@@ -1,0 +1,45 @@
+{
+  "style": "tool_demo",
+  "tool": "*Perplexity*",
+  "site_url": "https://www.perplexity.ai/",
+  "scenes": [
+    {
+      "voice": "Assignment ke liye research karni hai? Pandit ji ka tool: Perplexity.",
+      "voice_tts": "असाइनमेंट के लिए रिसर्च करनी है? पंडित जी का टूल: परप्लेक्सिटी।",
+      "text": "Research ka *shortcut*",
+      "scroll": 0
+    },
+    {
+      "voice": "Bas apna sawaal normal language mein type karo, jaise kisi dost se pooch rahe ho.",
+      "voice_tts": "बस अपना सवाल नॉर्मल लैंग्वेज में टाइप करो, जैसे किसी दोस्त से पूछ रहे हो।",
+      "text": "Sawaal *type* karo",
+      "scroll": 0
+    },
+    {
+      "voice": "Iska focus hai: trusted sources se fast answers.",
+      "voice_tts": "इसका फ़ोकस है: ट्रस्टेड सोर्सेज़ से फ़ास्ट आंसर्स।",
+      "text": "*Trusted sources* se answers",
+      "scroll": 0.1
+    },
+    {
+      "voice": "Pro tip: jo source mile, use khud open karke zaroor check karo.",
+      "voice_tts": "प्रो टिप: जो सोर्स मिले, उसे खुद ओपन करके ज़रूर चेक करो।",
+      "text": "Source *khud check* karo",
+      "scroll": 0.1
+    },
+    {
+      "voice": "Login ya sign up free hai, aur aapki searches save aur sync rehti hain.",
+      "voice_tts": "लॉगिन या साइन अप फ़्री है, और आपकी सर्चेज़ सेव और सिंक रहती हैं।",
+      "text": "Sign up *free*",
+      "scroll": 0
+    },
+    {
+      "voice": "Perplexity dot AI try karo. Save karo, follow karo Prompt Pandit.",
+      "voice_tts": "परप्लेक्सिटी डॉट ए आई ट्राई करो। सेव करो, फ़ॉलो करो प्रॉम्प्ट पंडित।",
+      "text": "*perplexity.ai*",
+      "scroll": 0
+    }
+  ],
+  "id": "2026-11-26_reel_perplexity-for-assignment-research",
+  "series": "Pandit ji ka Tool"
+}

@@ -1,0 +1,51 @@
+{
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Chapter ko *revision notes* mein badlo",
+      "subtitle": "Ek prompt: notes + key terms + MCQs."
+    },
+    {
+      "type": "content",
+      "kicker": "Problem",
+      "title": "Padha, par *yaad* nahi?",
+      "body": "Re-reading a whole chapter before the exam takes a lot of time. Short notes plus a quick self-test are easier to revise again and again."
+    },
+    {
+      "type": "prompt",
+      "title": "Ye prompt *copy* karo",
+      "prompt": "You are my study partner. From the text below:\n1. Make short revision notes in bullet points.\n2. List the key terms with one-line definitions.\n3. Give me 5 MCQs, with answers at the end.\n\nText: [paste your chapter or notes]",
+      "note": "Answers end mein maango, taaki pehle khud try karo."
+    },
+    {
+      "type": "before_after",
+      "title": "Fark dekho",
+      "before": "Summarise this chapter.",
+      "after": "Make bullet revision notes from this chapter, list key terms, and give 5 MCQs with answers at the end.",
+      "why": "Clear format = notes jo revise karne layak hon."
+    },
+    {
+      "type": "content",
+      "kicker": "Pro tips",
+      "title": "Better result ke liye",
+      "bullets": [
+        "Ek baar mein *ek topic* do",
+        "Apna *exam* bhi batao",
+        "MCQs ka *level* set karo"
+      ]
+    },
+    {
+      "type": "content",
+      "kicker": "Yaad rakho",
+      "title": "AI bhi *galti* kar sakta hai",
+      "body": "Always check the notes against your textbook. Use AI to revise faster, not to replace your book."
+    },
+    {
+      "type": "cta",
+      "title": "Kaam ka laga?",
+      "text": "Roz ek naya prompt: study, resume, interview."
+    }
+  ],
+  "id": "2026-11-26_carousel_chapter-to-revision-notes-and-mcqs-promp",
+  "series": "Prompt of the Day"
+}

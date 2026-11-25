@@ -1,0 +1,36 @@
+{
+  "style": "comparison",
+  "title": "Job *email* prompt",
+  "galat": "Write an email for a job.",
+  "sahi": "Write a short email applying for [Junior Accountant] at [company]. Mention my [B.Com] and [Tally skills]. Polite, under 120 words.",
+  "verdict": "Role + skills + length = *pro email*",
+  "scenes": [
+    {
+      "voice": "Galat vs sahi prompt. Aaj: job application email.",
+      "voice_tts": "ग़लत वर्सेस सही प्रॉम्प्ट। आज: जॉब एप्लिकेशन ईमेल।",
+      "reveal": "title"
+    },
+    {
+      "voice": "Zyadatar log likhte hain: write an email for a job.",
+      "voice_tts": "ज़्यादातर लोग लिखते हैं: राइट एन ईमेल फ़ॉर अ जॉब।",
+      "reveal": "galat"
+    },
+    {
+      "voice": "Na role, na company, na skills. Result: lamba aur boring email.",
+      "voice_tts": "ना रोल, ना कंपनी, ना स्किल्स। रिज़ल्ट: लंबा और बोरिंग ईमेल।",
+      "reveal": "galat"
+    },
+    {
+      "voice": "Sahi tareeka: role aur company ka naam do, apni degree aur skills batao, aur polite, short email maango.",
+      "voice_tts": "सही तरीका: रोल और कंपनी का नाम दो, अपनी डिग्री और स्किल्स बताओ, और पोलाइट, शॉर्ट ईमेल मांगो।",
+      "reveal": "sahi"
+    },
+    {
+      "voice": "Bhejne se pehle ek baar khud padh lo. Save karo, follow karo Prompt Pandit.",
+      "voice_tts": "भेजने से पहले एक बार खुद पढ़ लो। सेव करो, फ़ॉलो करो प्रॉम्प्ट पंडित।",
+      "reveal": "verdict"
+    }
+  ],
+  "id": "2026-11-30_reel_job-application-email-prompt",
+  "series": "Galat vs Sahi Prompt"
+}

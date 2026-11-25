@@ -1,0 +1,962 @@
+{
+  "week_start": "2026-11-26",
+  "notes": "First week: no insights yet, so all three series are tested evenly. Tool claims checked on official sites 2026-11-25.",
+  "items": [
+    {
+      "day": 1,
+      "type": "reel",
+      "series": "Pandit ji ka Tool",
+      "topic": "Perplexity for assignment research",
+      "hook": "Assignment ke liye research karni hai?",
+      "caption": "Assignment ke liye research karni hai? 🔍\n\nPerplexity mein bas apna sawaal normal language mein type karo. Answer aane ke baad source khud open karke zaroor check karo.\n\nAap research ke liye kya use karte ho? Comment mein batao 👇",
+      "hashtags": [
+        "#perplexity",
+        "#aitools",
+        "#studytips",
+        "#research",
+        "#aiforstudents",
+        "#promptpandit"
+      ],
+      "sources": [
+        "https://www.perplexity.ai/"
+      ],
+      "fact_check": [
+        "'Get fast and accurate answers from the most trusted sources' (we say: focus on trusted sources) -> perplexity.ai",
+        "'Login or sign up for free. Save and sync your searches' -> perplexity.ai"
+      ],
+      "spec": {
+        "style": "tool_demo",
+        "tool": "*Perplexity*",
+        "site_url": "https://www.perplexity.ai/",
+        "scenes": [
+          {
+            "voice": "Assignment ke liye research karni hai? Pandit ji ka tool: Perplexity.",
+            "voice_tts": "असाइनमेंट के लिए रिसर्च करनी है? पंडित जी का टूल: परप्लेक्सिटी।",
+            "text": "Research ka *shortcut*",
+            "scroll": 0
+          },
+          {
+            "voice": "Bas apna sawaal normal language mein type karo, jaise kisi dost se pooch rahe ho.",
+            "voice_tts": "बस अपना सवाल नॉर्मल लैंग्वेज में टाइप करो, जैसे किसी दोस्त से पूछ रहे हो।",
+            "text": "Sawaal *type* karo",
+            "scroll": 0
+          },
+          {
+            "voice": "Iska focus hai: trusted sources se fast answers.",
+            "voice_tts": "इसका फ़ोकस है: ट्रस्टेड सोर्सेज़ से फ़ास्ट आंसर्स।",
+            "text": "*Trusted sources* se answers",
+            "scroll": 0.1
+          },
+          {
+            "voice": "Pro tip: jo source mile, use khud open karke zaroor check karo.",
+            "voice_tts": "प्रो टिप: जो सोर्स मिले, उसे खुद ओपन करके ज़रूर चेक करो।",
+            "text": "Source *khud check* karo",
+            "scroll": 0.1
+          },
+          {
+            "voice": "Login ya sign up free hai, aur aapki searches save aur sync rehti hain.",
+            "voice_tts": "लॉगिन या साइन अप फ़्री है, और आपकी सर्चेज़ सेव और सिंक रहती हैं।",
+            "text": "Sign up *free*",
+            "scroll": 0
+          },
+          {
+            "voice": "Perplexity dot AI try karo. Save karo, follow karo Prompt Pandit.",
+            "voice_tts": "परप्लेक्सिटी डॉट ए आई ट्राई करो। सेव करो, फ़ॉलो करो प्रॉम्प्ट पंडित।",
+            "text": "*perplexity.ai*",
+            "scroll": 0
+          }
+        ]
+      }
+    },
+    {
+      "day": 1,
+      "type": "carousel",
+      "series": "Prompt of the Day",
+      "topic": "Chapter to revision notes and MCQs prompt",
+      "hook": "Chapter ko revision notes mein badlo",
+      "caption": "Padha, par yaad nahi? 📚\n\nIs prompt se kisi bhi chapter ke short revision notes, key terms aur 5 MCQs ek saath banao. Answers end mein, taaki pehle khud try karo.\n\nKaunsa subject sabse tough lagta hai? 👇",
+      "hashtags": [
+        "#studytips",
+        "#revision",
+        "#aiforstudents",
+        "#promptengineering",
+        "#examprep",
+        "#promptpandit"
+      ],
+      "sources": [
+        "original: prompt technique, no factual claims"
+      ],
+      "fact_check": [
+        "No factual claims. Advice only; no numbers or stats."
+      ],
+      "spec": {
+        "slides": [
+          {
+            "type": "cover",
+            "title": "Chapter ko *revision notes* mein badlo",
+            "subtitle": "Ek prompt: notes + key terms + MCQs."
+          },
+          {
+            "type": "content",
+            "kicker": "Problem",
+            "title": "Padha, par *yaad* nahi?",
+            "body": "Re-reading a whole chapter before the exam takes a lot of time. Short notes plus a quick self-test are easier to revise again and again."
+          },
+          {
+            "type": "prompt",
+            "title": "Ye prompt *copy* karo",
+            "prompt": "You are my study partner. From the text below:\n1. Make short revision notes in bullet points.\n2. List the key terms with one-line definitions.\n3. Give me 5 MCQs, with answers at the end.\n\nText: [paste your chapter or notes]",
+            "note": "Answers end mein maango, taaki pehle khud try karo."
+          },
+          {
+            "type": "before_after",
+            "title": "Fark dekho",
+            "before": "Summarise this chapter.",
+            "after": "Make bullet revision notes from this chapter, list key terms, and give 5 MCQs with answers at the end.",
+            "why": "Clear format = notes jo revise karne layak hon."
+          },
+          {
+            "type": "content",
+            "kicker": "Pro tips",
+            "title": "Better result ke liye",
+            "bullets": [
+              "Ek baar mein *ek topic* do",
+              "Apna *exam* bhi batao",
+              "MCQs ka *level* set karo"
+            ]
+          },
+          {
+            "type": "content",
+            "kicker": "Yaad rakho",
+            "title": "AI bhi *galti* kar sakta hai",
+            "body": "Always check the notes against your textbook. Use AI to revise faster, not to replace your book."
+          },
+          {
+            "type": "cta",
+            "title": "Kaam ka laga?",
+            "text": "Roz ek naya prompt: study, resume, interview."
+          }
+        ]
+      }
+    },
+    {
+      "day": 2,
+      "type": "reel",
+      "series": "Galat vs Sahi Prompt",
+      "topic": "Tell me about yourself interview answer prompt",
+      "hook": "Interview ka sabse common sawaal",
+      "caption": "'Tell me about yourself' pe atak jaate ho? 🎤\n\nGalat: AI ko bina details ke bolna.\nSahi: role, degree, ek project aur 2 skills do, phir 60-second answer maango.\n\nAnswer milne ke baad usse apne words mein practice karo. Aapka target role kya hai? 👇",
+      "hashtags": [
+        "#interviewtips",
+        "#jobsearch",
+        "#freshers",
+        "#promptengineering",
+        "#careeradvice",
+        "#promptpandit"
+      ],
+      "sources": [
+        "original: prompt technique, no factual claims"
+      ],
+      "fact_check": [
+        "No factual claims. Prompt advice only."
+      ],
+      "spec": {
+        "style": "comparison",
+        "title": "Interview *intro* prompt",
+        "galat": "Write my tell me about yourself answer.",
+        "sahi": "Write a 60-second 'Tell me about yourself' for a [fresher data analyst] role. Use my [degree], [1 project] and [2 skills].",
+        "verdict": "Apni details do, *apna* jawaab pao.",
+        "scenes": [
+          {
+            "voice": "Galat vs sahi prompt. Interview ka sabse common sawaal: tell me about yourself.",
+            "voice_tts": "ग़लत वर्सेस सही प्रॉम्प्ट। इंटरव्यू का सबसे कॉमन सवाल: टेल मी अबाउट योरसेल्फ़।",
+            "reveal": "title"
+          },
+          {
+            "voice": "Zyadatar log likhte hain: write my tell me about yourself answer.",
+            "voice_tts": "ज़्यादातर लोग लिखते हैं: राइट माई टेल मी अबाउट योरसेल्फ़ आंसर।",
+            "reveal": "galat"
+          },
+          {
+            "voice": "AI aapko jaanta hi nahi. Toh jawaab generic aur robotic lagega.",
+            "voice_tts": "एआई आपको जानता ही नहीं। तो जवाब जेनेरिक और रोबोटिक लगेगा।",
+            "reveal": "galat"
+          },
+          {
+            "voice": "Sahi tareeka: role batao, apni degree, ek project aur do skills do, aur sixty second ka simple answer maango.",
+            "voice_tts": "सही तरीका: रोल बताओ, अपनी डिग्री, एक प्रोजेक्ट और दो स्किल्स दो, और सिक्सटी सेकंड का सिंपल आंसर मांगो।",
+            "reveal": "sahi"
+          },
+          {
+            "voice": "Phir use apne words mein bolke practice karo. Save karo, follow karo Prompt Pandit.",
+            "voice_tts": "फिर उसे अपने वर्ड्स में बोलके प्रैक्टिस करो। सेव करो, फ़ॉलो करो प्रॉम्प्ट पंडित।",
+            "reveal": "verdict"
+          }
+        ]
+      }
+    },
+    {
+      "day": 2,
+      "type": "carousel",
+      "series": "Pandit ji ka Tool",
+      "topic": "Khanmigo AI tutor that guides without direct answers",
+      "hook": "AI tutor jo seedha answer nahi deta",
+      "caption": "Ek AI tutor jo seedha answer nahi deta 🤔\n\nKhanmigo, Khan Academy ka AI tutor, aapko khud sochne aur problem solve karne mein guide karta hai. Algebra, SQL ya essay writing, sab mein.\n\nAvailability aur price site pe zaroor check karo. Aapko hints pasand hain ya direct answers? 👇",
+      "hashtags": [
+        "#khanmigo",
+        "#khanacademy",
+        "#aitools",
+        "#aiforstudents",
+        "#studytips",
+        "#promptpandit"
+      ],
+      "sources": [
+        "https://www.khanmigo.ai/"
+      ],
+      "fact_check": [
+        "'Khan Academy's AI-powered teaching assistant & tutor' -> khanmigo.ai (page title)",
+        "'challenges you to think critically and solve problems without giving you direct answers' -> khanmigo.ai",
+        "'algebra, SQL, or essay writing' -> khanmigo.ai",
+        "'AI-enhanced writing practice and instruction tool ... Sign up for free' -> khanmigo.ai"
+      ],
+      "spec": {
+        "slides": [
+          {
+            "type": "cover",
+            "title": "AI tutor jo *seedha answer* nahi deta",
+            "subtitle": "Khanmigo: Khan Academy ka AI tutor."
+          },
+          {
+            "type": "content",
+            "kicker": "Kya hai",
+            "title": "*Khanmigo* kya hai?",
+            "body": "Khanmigo is Khan Academy's AI-powered teaching assistant and tutor."
+          },
+          {
+            "type": "content",
+            "kicker": "Khaas baat",
+            "title": "Answer nahi, *sochna* sikhata hai",
+            "body": "For learners, Khanmigo challenges you to think critically and solve problems without giving you direct answers."
+          },
+          {
+            "type": "content",
+            "kicker": "Kya seekh sakte ho",
+            "title": "Ek tool, kai skills",
+            "bullets": [
+              "*Algebra* jaise maths topics",
+              "*SQL* jaisi coding skills",
+              "*Essay* writing"
+            ]
+          },
+          {
+            "type": "content",
+            "kicker": "Writing Coach",
+            "title": "Writing *practice* ke liye",
+            "body": "Khanmigo also has an AI-enhanced writing practice and instruction tool. Its site says you can sign up for it for free."
+          },
+          {
+            "type": "content",
+            "kicker": "Pandit ji ki salah",
+            "title": "Kaise use karein?",
+            "bullets": [
+              "Pehle *khud* try karo",
+              "*Hint* maango, answer nahi",
+              "Availability aur price *site pe* check karo"
+            ]
+          },
+          {
+            "type": "cta",
+            "title": "Kaam ka laga?",
+            "text": "Har hafte naye AI tools, students ke liye."
+          }
+        ]
+      }
+    },
+    {
+      "day": 3,
+      "type": "reel",
+      "series": "Prompt of the Day",
+      "topic": "Explain like a beginner plus example plus quiz learning prompt",
+      "hook": "Koi topic samajh nahi aa raha?",
+      "caption": "Koi topic samajh nahi aa raha? 🧠\n\n3-step prompt:\n1. Explain like I'm a beginner\n2. Give one real-life example from India\n3. Ask me 3 questions to check if I understood\n\nKaunsa topic try karoge? 👇",
+      "hashtags": [
+        "#studytips",
+        "#promptengineering",
+        "#aiforstudents",
+        "#learning",
+        "#chatgptprompts",
+        "#promptpandit"
+      ],
+      "sources": [
+        "original: prompt technique, no factual claims"
+      ],
+      "fact_check": [
+        "No factual claims. Prompt advice only."
+      ],
+      "spec": {
+        "style": "kinetic",
+        "scenes": [
+          {
+            "voice": "Koi topic samajh nahi aa raha? Ye prompt try karo.",
+            "voice_tts": "कोई टॉपिक समझ नहीं आ रहा? ये प्रॉम्प्ट ट्राई करो।",
+            "text": "Topic samajh *nahi* aa raha?"
+          },
+          {
+            "voice": "AI ko bolo: explain this topic like I am a beginner.",
+            "voice_tts": "एआई को बोलो: एक्सप्लेन दिस टॉपिक लाइक आई एम अ बिगिनर।",
+            "kicker": "Step 1",
+            "text": "'Explain like I'm a *beginner*'"
+          },
+          {
+            "voice": "Phir likho: give me one real-life example from India.",
+            "voice_tts": "फिर लिखो: गिव मी वन रियल लाइफ़ एग्ज़ाम्पल फ़्रॉम इंडिया।",
+            "kicker": "Step 2",
+            "text": "Ek *real-life example* maango"
+          },
+          {
+            "voice": "Aur last mein: ask me three questions to check if I understood.",
+            "voice_tts": "और लास्ट में: आस्क मी थ्री क्वेश्चन्स टू चेक इफ़ आई अंडरस्टुड।",
+            "kicker": "Step 3",
+            "text": "AI se *quiz* karwao"
+          },
+          {
+            "voice": "Galat jawaab diya? Toh bolo: explain this part again.",
+            "voice_tts": "ग़लत जवाब दिया? तो बोलो: एक्सप्लेन दिस पार्ट अगेन।",
+            "text": "Galat? *Dobara* samjho"
+          },
+          {
+            "voice": "Samjho, example dekho, quiz do. Padhai pakki.",
+            "voice_tts": "समझो, एग्ज़ाम्पल देखो, क्विज़ दो। पढ़ाई पक्की।",
+            "text": "Samjho. Example. *Quiz.*"
+          },
+          {
+            "voice": "Save karo, follow karo Prompt Pandit.",
+            "voice_tts": "सेव करो, फ़ॉलो करो प्रॉम्प्ट पंडित।",
+            "text": "Save karo, *follow* karo"
+          }
+        ]
+      }
+    },
+    {
+      "day": 3,
+      "type": "carousel",
+      "series": "Galat vs Sahi Prompt",
+      "topic": "LinkedIn headline for students and freshers",
+      "hook": "LinkedIn headline: Galat vs Sahi",
+      "caption": "Aapki LinkedIn headline kya kehti hai? 💼\n\n'Student at XYZ College' se kaam nahi chalega. Role + skills + kya dhoondh rahe ho, ye likho. Aur prompt last slide se pehle hai, copy karo.\n\nApni headline comment mein daalo, feedback denge 👇",
+      "hashtags": [
+        "#linkedin",
+        "#linkedintips",
+        "#freshers",
+        "#jobsearch",
+        "#personalbranding",
+        "#promptpandit"
+      ],
+      "sources": [
+        "original: prompt technique, no factual claims"
+      ],
+      "fact_check": [
+        "No factual claims. Example headlines are illustrative; slide reminds to write only true details."
+      ],
+      "spec": {
+        "slides": [
+          {
+            "type": "cover",
+            "title": "LinkedIn headline: *Galat vs Sahi*",
+            "subtitle": "Profile pe sabse pehle dikhne wali line."
+          },
+          {
+            "type": "before_after",
+            "title": "Example 1",
+            "before": "Student at XYZ College",
+            "after": "B.Com Final Year | Excel & Tally | Looking for Accounts Internships",
+            "why": "Kya padh rahe ho + skills + kya dhoondh rahe ho."
+          },
+          {
+            "type": "before_after",
+            "title": "Example 2",
+            "before": "Hardworking and passionate person",
+            "after": "Aspiring Data Analyst | SQL, Python, Power BI | Projects on Sales Data",
+            "why": "Adjectives nahi, proof do. Sirf sach likho."
+          },
+          {
+            "type": "prompt",
+            "title": "Apni headline *AI se* banwao",
+            "prompt": "Write 5 LinkedIn headlines for me, each under 200 characters.\nRole I want: [target role]\nMy degree and year: [degree]\nTop skills: [3 skills]\nOne project or achievement: [project]\nNo buzzwords like 'passionate' or 'hardworking'.",
+            "note": "Jo details sach hain, sirf wahi do."
+          },
+          {
+            "type": "content",
+            "kicker": "Choose kaise karein",
+            "title": "Best headline ki *pehchaan*",
+            "bullets": [
+              "Jo *sach* ho wahi rakho",
+              "Target *role* ka naam ho",
+              "Skills wahi jo *resume* mein hain"
+            ]
+          },
+          {
+            "type": "content",
+            "kicker": "Bonus",
+            "title": "About section *bhi*",
+            "body": "Use the same details to ask AI for a 3-line About summary. Then edit it so it sounds like you."
+          },
+          {
+            "type": "cta",
+            "title": "Kaam ka laga?",
+            "text": "Resume, LinkedIn, interview: sab ke prompts yahin."
+          }
+        ]
+      }
+    },
+    {
+      "day": 4,
+      "type": "reel",
+      "series": "Pandit ji ka Tool",
+      "topic": "Napkin AI turns text into diagrams and visuals",
+      "hook": "Notes ko diagram mein badalna hai?",
+      "caption": "Notes ko diagram mein badalna hai? 📊\n\nNapkin AI mein text paste karo, click karo, aur suggested visuals mein se choose karo. Edit karke PPT, PNG, PDF ya SVG mein export karo.\n\nProject presentation ke liye kaam aayega? 👇",
+      "hashtags": [
+        "#napkinai",
+        "#aitools",
+        "#presentation",
+        "#studytips",
+        "#productivity",
+        "#promptpandit"
+      ],
+      "sources": [
+        "https://www.napkin.ai/"
+      ],
+      "fact_check": [
+        "'Napkin turns your text into visuals' -> napkin.ai",
+        "'Start by Importing or Pasting your text' -> napkin.ai",
+        "'Click to generate visuals ... you pick the one' -> napkin.ai",
+        "'Nothing is fixed. Change anything' -> napkin.ai",
+        "'Export them as .ppt, .png, .pdf or .svg' -> napkin.ai",
+        "'Get Napkin Free' button -> napkin.ai"
+      ],
+      "spec": {
+        "style": "tool_demo",
+        "tool": "*Napkin* AI",
+        "site_url": "https://www.napkin.ai/",
+        "scenes": [
+          {
+            "voice": "Notes ko diagram mein badalna hai? Pandit ji ka tool: Napkin AI.",
+            "voice_tts": "नोट्स को डायग्राम में बदलना है? पंडित जी का टूल: नैपकिन ए आई।",
+            "text": "Text se *visuals*",
+            "scroll": 0
+          },
+          {
+            "voice": "Apna text paste ya import karo.",
+            "voice_tts": "अपना टेक्स्ट पेस्ट या इम्पोर्ट करो।",
+            "text": "Text *paste* karo",
+            "scroll": 0.12
+          },
+          {
+            "voice": "Click karo, aur Napkin aapke text ke hisaab se visuals suggest karta hai. Jo pasand aaye, wo chuno.",
+            "voice_tts": "क्लिक करो, और नैपकिन आपके टेक्स्ट के हिसाब से विज़ुअल्स सजेस्ट करता है। जो पसंद आए, वो चुनो।",
+            "text": "*Click*, phir choose karo",
+            "scroll": 0.17
+          },
+          {
+            "voice": "Kuch bhi fixed nahi hai. Jo chaho, badal sakte ho.",
+            "voice_tts": "कुछ भी फ़िक्स्ड नहीं है। जो चाहो, बदल सकते हो।",
+            "text": "Apne hisaab se *edit*",
+            "scroll": 0.45
+          },
+          {
+            "voice": "Phir PPT, PNG, PDF ya SVG mein export karo.",
+            "voice_tts": "फिर पी पी टी, पी एन जी, पी डी एफ़ या एस वी जी में एक्सपोर्ट करो।",
+            "text": "Export: *PPT, PNG, PDF, SVG*",
+            "scroll": 0.79
+          },
+          {
+            "voice": "Presentation aur project ke liye mast hai. Napkin dot AI pe free shuru karo. Save karo, follow karo Prompt Pandit.",
+            "voice_tts": "प्रेज़ेंटेशन और प्रोजेक्ट के लिए मस्त है। नैपकिन डॉट ए आई पे फ़्री शुरू करो। सेव करो, फ़ॉलो करो प्रॉम्प्ट पंडित।",
+            "text": "*napkin.ai*",
+            "scroll": 0.98
+          }
+        ]
+      }
+    },
+    {
+      "day": 4,
+      "type": "carousel",
+      "series": "Prompt of the Day",
+      "topic": "Backward study plan from exam date prompt",
+      "hook": "Exam date se ulta plan banao",
+      "caption": "Exam date se ulta plan banao 📅\n\nPehle revision aur mock-test days fix karo, phir baaki topics fill karo. Prompt copy karo aur apni details daalo.\n\nAapka exam kab hai? 👇",
+      "hashtags": [
+        "#studyplan",
+        "#examprep",
+        "#studytips",
+        "#aiforstudents",
+        "#promptengineering",
+        "#promptpandit"
+      ],
+      "sources": [
+        "original: prompt technique, no factual claims"
+      ],
+      "fact_check": [
+        "No factual claims. Planning advice only."
+      ],
+      "spec": {
+        "slides": [
+          {
+            "type": "cover",
+            "title": "Exam date se *ulta* plan banao",
+            "subtitle": "Backward study plan: ek prompt mein."
+          },
+          {
+            "type": "content",
+            "kicker": "Idea",
+            "title": "Deadline se *peeche* chalo",
+            "body": "Start from your exam date and work backwards. Fix your revision and mock-test days first, then fill in the new topics."
+          },
+          {
+            "type": "prompt",
+            "title": "Ye prompt *copy* karo",
+            "prompt": "Make a backward study plan.\nExam: [exam name] on [date]\nToday: [date]\nHours per day: [hours]\nTopics left: [list]\nWeak topics: [list]\n\nKeep the last week for revision and mock tests. Give a day-by-day table.",
+            "note": "Weak topics alag se batao, AI unhe pehle rakhega."
+          },
+          {
+            "type": "before_after",
+            "title": "Fark dekho",
+            "before": "Make a study timetable.",
+            "after": "Make a day-by-day plan from today to my exam on [date], with [3] hours a day, weak topics first, and the last week for revision.",
+            "why": "Dates + hours + weak topics = realistic plan."
+          },
+          {
+            "type": "content",
+            "kicker": "Pro tips",
+            "title": "Plan ko *real* banao",
+            "bullets": [
+              "Har week ek *buffer day*",
+              "Weak topics jab *fresh* ho",
+              "Har Sunday plan *update* karo"
+            ]
+          },
+          {
+            "type": "content",
+            "kicker": "Yaad rakho",
+            "title": "Plan *flexible* rakho",
+            "body": "Missed a day? Paste your plan back and ask AI to adjust the remaining days. Don't restart from zero."
+          },
+          {
+            "type": "cta",
+            "title": "Kaam ka laga?",
+            "text": "Roz ek naya prompt: study, resume, interview."
+          }
+        ]
+      }
+    },
+    {
+      "day": 5,
+      "type": "reel",
+      "series": "Galat vs Sahi Prompt",
+      "topic": "Job application email prompt",
+      "hook": "Job ke liye email kaise likhein?",
+      "caption": "Job application email: Galat vs Sahi ✉️\n\nRole, company, degree aur skills do, aur short, polite email maango. Bhejne se pehle ek baar khud padh lo.\n\nKis role ke liye apply kar rahe ho? 👇",
+      "hashtags": [
+        "#jobsearch",
+        "#jobapplication",
+        "#emailwriting",
+        "#freshers",
+        "#promptengineering",
+        "#promptpandit"
+      ],
+      "sources": [
+        "original: prompt technique, no factual claims"
+      ],
+      "fact_check": [
+        "No factual claims. Prompt advice only."
+      ],
+      "spec": {
+        "style": "comparison",
+        "title": "Job *email* prompt",
+        "galat": "Write an email for a job.",
+        "sahi": "Write a short email applying for [Junior Accountant] at [company]. Mention my [B.Com] and [Tally skills]. Polite, under 120 words.",
+        "verdict": "Role + skills + length = *pro email*",
+        "scenes": [
+          {
+            "voice": "Galat vs sahi prompt. Aaj: job application email.",
+            "voice_tts": "ग़लत वर्सेस सही प्रॉम्प्ट। आज: जॉब एप्लिकेशन ईमेल।",
+            "reveal": "title"
+          },
+          {
+            "voice": "Zyadatar log likhte hain: write an email for a job.",
+            "voice_tts": "ज़्यादातर लोग लिखते हैं: राइट एन ईमेल फ़ॉर अ जॉब।",
+            "reveal": "galat"
+          },
+          {
+            "voice": "Na role, na company, na skills. Result: lamba aur boring email.",
+            "voice_tts": "ना रोल, ना कंपनी, ना स्किल्स। रिज़ल्ट: लंबा और बोरिंग ईमेल।",
+            "reveal": "galat"
+          },
+          {
+            "voice": "Sahi tareeka: role aur company ka naam do, apni degree aur skills batao, aur polite, short email maango.",
+            "voice_tts": "सही तरीका: रोल और कंपनी का नाम दो, अपनी डिग्री और स्किल्स बताओ, और पोलाइट, शॉर्ट ईमेल मांगो।",
+            "reveal": "sahi"
+          },
+          {
+            "voice": "Bhejne se pehle ek baar khud padh lo. Save karo, follow karo Prompt Pandit.",
+            "voice_tts": "भेजने से पहले एक बार खुद पढ़ लो। सेव करो, फ़ॉलो करो प्रॉम्प्ट पंडित।",
+            "reveal": "verdict"
+          }
+        ]
+      }
+    },
+    {
+      "day": 5,
+      "type": "carousel",
+      "series": "Pandit ji ka Tool",
+      "topic": "Gemini Notebook study tool from your own notes",
+      "hook": "Apne notes se AI tutor banao",
+      "caption": "Apne notes se AI tutor banao 📒\n\nGemini Notebook (notebooklm.google) mein apne sources add karo aur sawaal pucho. Answers aapke diye material pe based hote hain. Audio Overviews, flashcards aur quizzes bhi.\n\nAnswers hamesha apni book se match karo. Try kiya hai? 👇",
+      "hashtags": [
+        "#notebooklm",
+        "#gemini",
+        "#aitools",
+        "#studytips",
+        "#aiforstudents",
+        "#promptpandit"
+      ],
+      "sources": [
+        "https://notebooklm.google/"
+      ],
+      "fact_check": [
+        "'The responses you get will always be grounded in the information you provide' -> notebooklm.google",
+        "'Audio Overviews: Hear a summary of your sources read aloud' -> notebooklm.google",
+        "'Video Overviews' (hero headline) -> notebooklm.google",
+        "'Flashcards ... study aids generated from your own sources' and 'Quizzes' -> notebooklm.google",
+        "'Explore featured public notebooks' -> notebooklm.google",
+        "'When you use Gemini Notebook as an individual, your data is not used for training unless you share feedback' -> notebooklm.google"
+      ],
+      "spec": {
+        "slides": [
+          {
+            "type": "cover",
+            "title": "Apne notes se *AI tutor* banao",
+            "subtitle": "Pandit ji ka Tool: Gemini Notebook (notebooklm.google)."
+          },
+          {
+            "type": "content",
+            "kicker": "Kya hai",
+            "title": "Gemini *Notebook*",
+            "body": "A Google tool where you add your own sources and ask questions about them. Its answers are grounded in the information you provide."
+          },
+          {
+            "type": "content",
+            "kicker": "Features",
+            "title": "Kya kya *bana* sakta hai?",
+            "bullets": [
+              "*Audio Overviews*: sources ka summary suno",
+              "*Flashcards* aur *quizzes*",
+              "*Video Overviews*"
+            ]
+          },
+          {
+            "type": "content",
+            "kicker": "Shuruaat",
+            "title": "Kahan se *start* karein?",
+            "body": "Not sure where to begin? The site has featured public notebooks you can explore first."
+          },
+          {
+            "type": "content",
+            "kicker": "Privacy",
+            "title": "Data ka *kya*?",
+            "body": "The site says that for individual users, your data is not used for training unless you share feedback."
+          },
+          {
+            "type": "content",
+            "kicker": "Pandit ji ki salah",
+            "title": "Exam ke liye *use*",
+            "bullets": [
+              "Apne *class notes* add karo",
+              "Chapter-wise *quiz* banao",
+              "Answers *book* se match karo"
+            ]
+          },
+          {
+            "type": "cta",
+            "title": "Kaam ka laga?",
+            "text": "Har hafte naye AI tools, students ke liye."
+          }
+        ]
+      }
+    },
+    {
+      "day": 6,
+      "type": "reel",
+      "series": "Prompt of the Day",
+      "topic": "Mock interview practice prompt",
+      "hook": "Interview se darr lagta hai?",
+      "caption": "Interview se darr lagta hai? 😅\n\nAI ko interviewer banao: ek time pe ek sawaal, aur har answer ke baad feedback + better version. Answers zor se bolo, phir type karo.\n\nAapka next interview kis role ke liye hai? 👇",
+      "hashtags": [
+        "#interviewtips",
+        "#mockinterview",
+        "#freshers",
+        "#jobsearch",
+        "#promptengineering",
+        "#promptpandit"
+      ],
+      "sources": [
+        "original: prompt technique, no factual claims"
+      ],
+      "fact_check": [
+        "No factual claims. Prompt advice only."
+      ],
+      "spec": {
+        "style": "kinetic",
+        "scenes": [
+          {
+            "voice": "Interview se darr lagta hai? Ye prompt try karo.",
+            "voice_tts": "इंटरव्यू से डर लगता है? ये प्रॉम्प्ट ट्राई करो।",
+            "text": "Interview se *darr*?"
+          },
+          {
+            "voice": "AI ko bolo: act as an interviewer for a fresher software role.",
+            "voice_tts": "एआई को बोलो: एक्ट ऐज़ एन इंटरव्यूअर फ़ॉर अ फ़्रेशर सॉफ़्टवेयर रोल।",
+            "kicker": "Copy this",
+            "text": "'Act as an *interviewer* for [role]'"
+          },
+          {
+            "voice": "Ask me one question at a time, and wait for my answer.",
+            "voice_tts": "आस्क मी वन क्वेश्चन एट अ टाइम, एंड वेट फ़ॉर माई आंसर।",
+            "text": "*One question* at a time"
+          },
+          {
+            "voice": "Har answer ke baad: give feedback and a better version.",
+            "voice_tts": "हर आंसर के बाद: गिव फ़ीडबैक एंड अ बेटर वर्ज़न।",
+            "text": "Har answer pe *feedback*"
+          },
+          {
+            "voice": "Answers zor se bolo, phir type karo. Speaking practice bhi ho jayegi.",
+            "voice_tts": "आंसर्स ज़ोर से बोलो, फिर टाइप करो। स्पीकिंग प्रैक्टिस भी हो जाएगी।",
+            "text": "Bolo, phir *type* karo"
+          },
+          {
+            "voice": "Roz thodi practice karo, confidence khud aayega.",
+            "voice_tts": "रोज़ थोड़ी प्रैक्टिस करो, कॉन्फ़िडेंस खुद आएगा।",
+            "text": "Roz *practice*"
+          },
+          {
+            "voice": "Save karo, follow karo Prompt Pandit.",
+            "voice_tts": "सेव करो, फ़ॉलो करो प्रॉम्प्ट पंडित।",
+            "text": "Save karo, *follow* karo"
+          }
+        ]
+      }
+    },
+    {
+      "day": 6,
+      "type": "carousel",
+      "series": "Galat vs Sahi Prompt",
+      "topic": "Debugging code error prompt",
+      "hook": "Code mein error? Aise pucho",
+      "caption": "Code mein error? AI se aise pucho 💻\n\nGalat: 'Fix it.'\nSahi: error + code + expected output do, aur pehle cause samjhane ko bolo.\n\nAur haan: passwords ya API keys kabhi paste mat karo. Aap kaunsi language seekh rahe ho? 👇",
+      "hashtags": [
+        "#coding",
+        "#programming",
+        "#debugging",
+        "#python",
+        "#promptengineering",
+        "#promptpandit"
+      ],
+      "sources": [
+        "original: prompt technique, no factual claims"
+      ],
+      "fact_check": [
+        "No factual claims. Prompt and safety advice only."
+      ],
+      "spec": {
+        "slides": [
+          {
+            "type": "cover",
+            "title": "Code mein *error*? Aise pucho",
+            "subtitle": "Galat vs Sahi: debugging prompt."
+          },
+          {
+            "type": "before_after",
+            "title": "Fark dekho",
+            "before": "My code is not working. Fix it.",
+            "after": "My Python code gives this error: [paste error]. Here is the code: [paste code]. Explain the cause simply, then show the fix.",
+            "why": "Error + code + 'explain' = seekhoge bhi."
+          },
+          {
+            "type": "content",
+            "kicker": "Kyun",
+            "title": "AI ko *andaaza* na lagane do",
+            "body": "Without the exact error message and code, the AI has to guess. Paste both, and say what you expected to happen."
+          },
+          {
+            "type": "prompt",
+            "title": "Ye template *save* karo",
+            "prompt": "Language: [Python/Java/C++]\nWhat I expected: [expected output]\nWhat happened: [actual output or error]\nCode:\n[paste code]\n\nExplain the bug in simple words first. Then give the fixed code with comments.",
+            "note": "Pehle samjho, phir fix copy karo."
+          },
+          {
+            "type": "content",
+            "kicker": "Pro tips",
+            "title": "Smart *debugging*",
+            "bullets": [
+              "Sirf *relevant* part paste karo",
+              "*Passwords / API keys* kabhi paste mat karo",
+              "Fix ko khud *run* karke check karo"
+            ]
+          },
+          {
+            "type": "content",
+            "kicker": "Yaad rakho",
+            "title": "Copy nahi, *samjho*",
+            "body": "After every bug, ask: why did this fix work? That habit helps in coding interviews too."
+          },
+          {
+            "type": "cta",
+            "title": "Kaam ka laga?",
+            "text": "Coding, study, career: roz ek naya prompt."
+          }
+        ]
+      }
+    },
+    {
+      "day": 7,
+      "type": "reel",
+      "series": "Pandit ji ka Tool",
+      "topic": "Grammarly for clear emails and resumes",
+      "hook": "English email likhte waqt doubt hota hai?",
+      "caption": "English email likhte waqt doubt hota hai? ✍️\n\nGrammarly grammar, structure aur clarity mein help karta hai, ek click mein paragraph rewrite karta hai, aur tone suggestions deta hai. Sign up free hai.\n\nResume ya email: pehle kahan try karoge? 👇",
+      "hashtags": [
+        "#grammarly",
+        "#englishwriting",
+        "#aitools",
+        "#emailwriting",
+        "#jobsearch",
+        "#promptpandit"
+      ],
+      "sources": [
+        "https://www.grammarly.com/"
+      ],
+      "fact_check": [
+        "'Proofreading: Refine grammar, structure, clarity, and more' -> grammarly.com",
+        "'Paragraph rewrites: Improve clarity and flow with one click' -> grammarly.com",
+        "'Tone suggestions: Adapt your message for the context' -> grammarly.com",
+        "'Sign Up, It's free' -> grammarly.com"
+      ],
+      "spec": {
+        "style": "tool_demo",
+        "tool": "*Grammarly*",
+        "site_url": "https://www.grammarly.com/",
+        "scenes": [
+          {
+            "voice": "English email likhte waqt doubt hota hai? Pandit ji ka tool: Grammarly.",
+            "voice_tts": "इंग्लिश ईमेल लिखते वक़्त डाउट होता है? पंडित जी का टूल: ग्रामरली।",
+            "text": "Writing mein *doubt*?",
+            "scroll": 0
+          },
+          {
+            "voice": "Ye grammar, structure aur clarity theek karne mein help karta hai.",
+            "voice_tts": "ये ग्रामर, स्ट्रक्चर और क्लैरिटी ठीक करने में हेल्प करता है।",
+            "text": "*Proofreading*",
+            "scroll": 0.11
+          },
+          {
+            "voice": "Paragraph ko ek click mein rewrite karke clear bana sakte ho.",
+            "voice_tts": "पैराग्राफ़ को एक क्लिक में रीराइट करके क्लियर बना सकते हो।",
+            "text": "One-click *rewrites*",
+            "scroll": 0.11
+          },
+          {
+            "voice": "Tone suggestions bhi milte hain, taaki message situation ke hisaab se lage.",
+            "voice_tts": "टोन सजेशन्स भी मिलते हैं, ताकि मैसेज सिचुएशन के हिसाब से लगे।",
+            "text": "*Tone* suggestions",
+            "scroll": 0.31
+          },
+          {
+            "voice": "Sign up free hai. Resume, email aur cover letter, sab pe try karo.",
+            "voice_tts": "साइन अप फ़्री है। रिज़्यूमे, ईमेल और कवर लेटर, सब पे ट्राई करो।",
+            "text": "Sign up *free*",
+            "scroll": 0.52
+          },
+          {
+            "voice": "Grammarly dot com. Save karo, follow karo Prompt Pandit.",
+            "voice_tts": "ग्रामरली डॉट कॉम। सेव करो, फ़ॉलो करो प्रॉम्प्ट पंडित।",
+            "text": "*grammarly.com*",
+            "scroll": 0
+          }
+        ]
+      }
+    },
+    {
+      "day": 7,
+      "type": "carousel",
+      "series": "Prompt of the Day",
+      "topic": "AI as English speaking practice partner prompt",
+      "hook": "AI ko banao English speaking partner",
+      "caption": "English bolne ka partner nahi mil raha? 🗣️\n\nAI ko speaking partner banao: ek time pe ek sawaal, aur har reply ke baad gentle correction. Apni repeated mistakes note karo.\n\nAaj kis topic pe practice karoge? 👇",
+      "hashtags": [
+        "#spokenenglish",
+        "#englishspeaking",
+        "#aiforstudents",
+        "#promptengineering",
+        "#communicationskills",
+        "#promptpandit"
+      ],
+      "sources": [
+        "original: prompt technique, no factual claims"
+      ],
+      "fact_check": [
+        "No factual claims. 'by voice where the app supports it' is hedged on purpose."
+      ],
+      "spec": {
+        "slides": [
+          {
+            "type": "cover",
+            "title": "AI ko banao *English speaking partner*",
+            "subtitle": "Daily practice prompt."
+          },
+          {
+            "type": "content",
+            "kicker": "Problem",
+            "title": "Bolne ka *mauka* nahi milta?",
+            "body": "Speaking improves with practice. If you don't have a partner, an AI chat can be one: by text, or by voice where the app supports it."
+          },
+          {
+            "type": "prompt",
+            "title": "Ye prompt *copy* karo",
+            "prompt": "Be my English speaking partner. Talk to me about [topic] in simple English.\nAsk one question at a time.\nAfter each reply, gently correct my mistakes and show a better sentence.\nMy level: [beginner / intermediate].",
+            "note": "Level sahi batao, taaki sawaal na zyada easy hon, na zyada tough."
+          },
+          {
+            "type": "content",
+            "kicker": "Topics",
+            "title": "Ye topics *try* karo",
+            "bullets": [
+              "Apna *introduction*",
+              "Apna *college / job* experience",
+              "Weekend *plans*"
+            ]
+          },
+          {
+            "type": "before_after",
+            "title": "Fark dekho",
+            "before": "Teach me English.",
+            "after": "Chat with me about [my weekend] in simple English, one question at a time, and correct my mistakes after each reply.",
+            "why": "Topic + format + correction = real practice."
+          },
+          {
+            "type": "content",
+            "kicker": "Pandit ji ki salah",
+            "title": "Roz *thodi* practice",
+            "body": "Do a short chat every day. Note your repeated mistakes and practise those sentences out loud."
+          },
+          {
+            "type": "cta",
+            "title": "Kaam ka laga?",
+            "text": "Roz ek naya prompt: study, career, English."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Exam date se *ulta* plan banao",
+      "subtitle": "Backward study plan: ek prompt mein."
+    },
+    {
+      "type": "content",
+      "kicker": "Idea",
+      "title": "Deadline se *peeche* chalo",
+      "body": "Start from your exam date and work backwards. Fix your revision and mock-test days first, then fill in the new topics."
+    },
+    {
+      "type": "prompt",
+      "title": "Ye prompt *copy* karo",
+      "prompt": "Make a backward study plan.\nExam: [exam name] on [date]\nToday: [date]\nHours per day: [hours]\nTopics left: [list]\nWeak topics: [list]\n\nKeep the last week for revision and mock tests. Give a day-by-day table.",
+      "note": "Weak topics alag se batao, AI unhe pehle rakhega."
+    },
+    {
+      "type": "before_after",
+      "title": "Fark dekho",
+      "before": "Make a study timetable.",
+      "after": "Make a day-by-day plan from today to my exam on [date], with [3] hours a day, weak topics first, and the last week for revision.",
+      "why": "Dates + hours + weak topics = realistic plan."
+    },
+    {
+      "type": "content",
+      "kicker": "Pro tips",
+      "title": "Plan ko *real* banao",
+      "bullets": [
+        "Har week ek *buffer day*",
+        "Weak topics jab *fresh* ho",
+        "Har Sunday plan *update* karo"
+      ]
+    },
+    {
+      "type": "content",
+      "kicker": "Yaad rakho",
+      "title": "Plan *flexible* rakho",
+      "body": "Missed a day? Paste your plan back and ask AI to adjust the remaining days. Don't restart from zero."
+    },
+    {
+      "type": "cta",
+      "title": "Kaam ka laga?",
+      "text": "Roz ek naya prompt: study, resume, interview."
+    }
+  ],
+  "id": "2026-11-29_carousel_backward-study-plan-from-exam-date-promp",
+  "series": "Prompt of the Day"
+}

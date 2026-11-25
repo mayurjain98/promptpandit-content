@@ -1,0 +1,23 @@
+{
+  "id": "2026-12-01_carousel_debugging-code-error-prompt",
+  "type": "carousel",
+  "series": "Galat vs Sahi Prompt",
+  "topic": "Debugging code error prompt",
+  "hook": "Code mein error? Aise pucho",
+  "caption": "Code mein error? AI se aise pucho 💻\n\nGalat: 'Fix it.'\nSahi: error + code + expected output do, aur pehle cause samjhane ko bolo.\n\nAur haan: passwords ya API keys kabhi paste mat karo. Aap kaunsi language seekh rahe ho? 👇\n\nSave karo, follow karo @promptpandit.in\n\n#coding #programming #debugging #python #promptengineering #promptpandit",
+  "sources": [
+    "original: prompt technique, no factual claims"
+  ],
+  "files": [
+    "content/queue/2026-12-01_carousel_debugging-code-error-prompt/slide_01.jpg",
+    "content/queue/2026-12-01_carousel_debugging-code-error-prompt/slide_02.jpg",
+    "content/queue/2026-12-01_carousel_debugging-code-error-prompt/slide_03.jpg",
+    "content/queue/2026-12-01_carousel_debugging-code-error-prompt/slide_04.jpg",
+    "content/queue/2026-12-01_carousel_debugging-code-error-prompt/slide_05.jpg",
+    "content/queue/2026-12-01_carousel_debugging-code-error-prompt/slide_06.jpg",
+    "content/queue/2026-12-01_carousel_debugging-code-error-prompt/slide_07.jpg"
+  ],
+  "publish_at_ist": "2026-12-01T19:30:00+05:30",
+  "publish_at_utc": "2026-12-01T14:00:00+00:00",
+  "qa_passed": true
+}

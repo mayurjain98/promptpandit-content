@@ -1,1 +1,214 @@
-{"items": []}
+{
+  "items": [
+    {
+      "id": "2026-11-26_reel_perplexity-for-assignment-research",
+      "type": "reel",
+      "publish_at_ist": "2026-11-26T13:00:00+05:30",
+      "publish_at_utc": "2026-11-26T07:30:00+00:00",
+      "files": [
+        "content/queue/2026-11-26_reel_perplexity-for-assignment-research/reel.mp4"
+      ],
+      "caption": "Assignment ke liye research karni hai? 🔍\n\nPerplexity mein bas apna sawaal normal language mein type karo. Answer aane ke baad source khud open karke zaroor check karo.\n\nAap research ke liye kya use karte ho? Comment mein batao 👇\n\nSave karo, follow karo @promptpandit.in\n\nSource: perplexity.ai (official site)\n\n#perplexity #aitools #studytips #research #aiforstudents #promptpandit",
+      "qa_passed": true,
+      "status": "queued"
+    },
+    {
+      "id": "2026-11-26_carousel_chapter-to-revision-notes-and-mcqs-promp",
+      "type": "carousel",
+      "publish_at_ist": "2026-11-26T19:30:00+05:30",
+      "publish_at_utc": "2026-11-26T14:00:00+00:00",
+      "files": [
+        "content/queue/2026-11-26_carousel_chapter-to-revision-notes-and-mcqs-promp/slide_01.jpg",
+        "content/queue/2026-11-26_carousel_chapter-to-revision-notes-and-mcqs-promp/slide_02.jpg",
+        "content/queue/2026-11-26_carousel_chapter-to-revision-notes-and-mcqs-promp/slide_03.jpg",
+        "content/queue/2026-11-26_carousel_chapter-to-revision-notes-and-mcqs-promp/slide_04.jpg",
+        "content/queue/2026-11-26_carousel_chapter-to-revision-notes-and-mcqs-promp/slide_05.jpg",
+        "content/queue/2026-11-26_carousel_chapter-to-revision-notes-and-mcqs-promp/slide_06.jpg",
+        "content/queue/2026-11-26_carousel_chapter-to-revision-notes-and-mcqs-promp/slide_07.jpg"
+      ],
+      "caption": "Padha, par yaad nahi? 📚\n\nIs prompt se kisi bhi chapter ke short revision notes, key terms aur 5 MCQs ek saath banao. Answers end mein, taaki pehle khud try karo.\n\nKaunsa subject sabse tough lagta hai? 👇\n\nSave karo, follow karo @promptpandit.in\n\n#studytips #revision #aiforstudents #promptengineering #examprep #promptpandit",
+      "qa_passed": true,
+      "status": "queued"
+    },
+    {
+      "id": "2026-11-27_reel_tell-me-about-yourself-interview-answer-",
+      "type": "reel",
+      "publish_at_ist": "2026-11-27T13:00:00+05:30",
+      "publish_at_utc": "2026-11-27T07:30:00+00:00",
+      "files": [
+        "content/queue/2026-11-27_reel_tell-me-about-yourself-interview-answer-/reel.mp4"
+      ],
+      "caption": "'Tell me about yourself' pe atak jaate ho? 🎤\n\nGalat: AI ko bina details ke bolna.\nSahi: role, degree, ek project aur 2 skills do, phir 60-second answer maango.\n\nAnswer milne ke baad usse apne words mein practice karo. Aapka target role kya hai? 👇\n\nSave karo, follow karo @promptpandit.in\n\n#interviewtips #jobsearch #freshers #promptengineering #careeradvice #promptpandit",
+      "qa_passed": true,
+      "status": "queued"
+    },
+    {
+      "id": "2026-11-27_carousel_khanmigo-ai-tutor-that-guides-without-di",
+      "type": "carousel",
+      "publish_at_ist": "2026-11-27T19:30:00+05:30",
+      "publish_at_utc": "2026-11-27T14:00:00+00:00",
+      "files": [
+        "content/queue/2026-11-27_carousel_khanmigo-ai-tutor-that-guides-without-di/slide_01.jpg",
+        "content/queue/2026-11-27_carousel_khanmigo-ai-tutor-that-guides-without-di/slide_02.jpg",
+        "content/queue/2026-11-27_carousel_khanmigo-ai-tutor-that-guides-without-di/slide_03.jpg",
+        "content/queue/2026-11-27_carousel_khanmigo-ai-tutor-that-guides-without-di/slide_04.jpg",
+        "content/queue/2026-11-27_carousel_khanmigo-ai-tutor-that-guides-without-di/slide_05.jpg",
+        "content/queue/2026-11-27_carousel_khanmigo-ai-tutor-that-guides-without-di/slide_06.jpg",
+        "content/queue/2026-11-27_carousel_khanmigo-ai-tutor-that-guides-without-di/slide_07.jpg"
+      ],
+      "caption": "Ek AI tutor jo seedha answer nahi deta 🤔\n\nKhanmigo, Khan Academy ka AI tutor, aapko khud sochne aur problem solve karne mein guide karta hai. Algebra, SQL ya essay writing, sab mein.\n\nAvailability aur price site pe zaroor check karo. Aapko hints pasand hain ya direct answers? 👇\n\nSave karo, follow karo @promptpandit.in\n\nSource: khanmigo.ai (official site)\n\n#khanmigo #khanacademy #aitools #aiforstudents #studytips #promptpandit",
+      "qa_passed": true,
+      "status": "queued"
+    },
+    {
+      "id": "2026-11-28_reel_explain-like-a-beginner-plus-example-plu",
+      "type": "reel",
+      "publish_at_ist": "2026-11-28T13:00:00+05:30",
+      "publish_at_utc": "2026-11-28T07:30:00+00:00",
+      "files": [
+        "content/queue/2026-11-28_reel_explain-like-a-beginner-plus-example-plu/reel.mp4"
+      ],
+      "caption": "Koi topic samajh nahi aa raha? 🧠\n\n3-step prompt:\n1. Explain like I'm a beginner\n2. Give one real-life example from India\n3. Ask me 3 questions to check if I understood\n\nKaunsa topic try karoge? 👇\n\nSave karo, follow karo @promptpandit.in\n\n#studytips #promptengineering #aiforstudents #learning #chatgptprompts #promptpandit",
+      "qa_passed": true,
+      "status": "queued"
+    },
+    {
+      "id": "2026-11-28_carousel_linkedin-headline-for-students-and-fresh",
+      "type": "carousel",
+      "publish_at_ist": "2026-11-28T19:30:00+05:30",
+      "publish_at_utc": "2026-11-28T14:00:00+00:00",
+      "files": [
+        "content/queue/2026-11-28_carousel_linkedin-headline-for-students-and-fresh/slide_01.jpg",
+        "content/queue/2026-11-28_carousel_linkedin-headline-for-students-and-fresh/slide_02.jpg",
+        "content/queue/2026-11-28_carousel_linkedin-headline-for-students-and-fresh/slide_03.jpg",
+        "content/queue/2026-11-28_carousel_linkedin-headline-for-students-and-fresh/slide_04.jpg",
+        "content/queue/2026-11-28_carousel_linkedin-headline-for-students-and-fresh/slide_05.jpg",
+        "content/queue/2026-11-28_carousel_linkedin-headline-for-students-and-fresh/slide_06.jpg",
+        "content/queue/2026-11-28_carousel_linkedin-headline-for-students-and-fresh/slide_07.jpg"
+      ],
+      "caption": "Aapki LinkedIn headline kya kehti hai? 💼\n\n'Student at XYZ College' se kaam nahi chalega. Role + skills + kya dhoondh rahe ho, ye likho. Aur prompt last slide se pehle hai, copy karo.\n\nApni headline comment mein daalo, feedback denge 👇\n\nSave karo, follow karo @promptpandit.in\n\n#linkedin #linkedintips #freshers #jobsearch #personalbranding #promptpandit",
+      "qa_passed": true,
+      "status": "queued"
+    },
+    {
+      "id": "2026-11-29_reel_napkin-ai-turns-text-into-diagrams-and-v",
+      "type": "reel",
+      "publish_at_ist": "2026-11-29T13:00:00+05:30",
+      "publish_at_utc": "2026-11-29T07:30:00+00:00",
+      "files": [
+        "content/queue/2026-11-29_reel_napkin-ai-turns-text-into-diagrams-and-v/reel.mp4"
+      ],
+      "caption": "Notes ko diagram mein badalna hai? 📊\n\nNapkin AI mein text paste karo, click karo, aur suggested visuals mein se choose karo. Edit karke PPT, PNG, PDF ya SVG mein export karo.\n\nProject presentation ke liye kaam aayega? 👇\n\nSave karo, follow karo @promptpandit.in\n\nSource: napkin.ai (official site)\n\n#napkinai #aitools #presentation #studytips #productivity #promptpandit",
+      "qa_passed": true,
+      "status": "queued"
+    },
+    {
+      "id": "2026-11-29_carousel_backward-study-plan-from-exam-date-promp",
+      "type": "carousel",
+      "publish_at_ist": "2026-11-29T19:30:00+05:30",
+      "publish_at_utc": "2026-11-29T14:00:00+00:00",
+      "files": [
+        "content/queue/2026-11-29_carousel_backward-study-plan-from-exam-date-promp/slide_01.jpg",
+        "content/queue/2026-11-29_carousel_backward-study-plan-from-exam-date-promp/slide_02.jpg",
+        "content/queue/2026-11-29_carousel_backward-study-plan-from-exam-date-promp/slide_03.jpg",
+        "content/queue/2026-11-29_carousel_backward-study-plan-from-exam-date-promp/slide_04.jpg",
+        "content/queue/2026-11-29_carousel_backward-study-plan-from-exam-date-promp/slide_05.jpg",
+        "content/queue/2026-11-29_carousel_backward-study-plan-from-exam-date-promp/slide_06.jpg",
+        "content/queue/2026-11-29_carousel_backward-study-plan-from-exam-date-promp/slide_07.jpg"
+      ],
+      "caption": "Exam date se ulta plan banao 📅\n\nPehle revision aur mock-test days fix karo, phir baaki topics fill karo. Prompt copy karo aur apni details daalo.\n\nAapka exam kab hai? 👇\n\nSave karo, follow karo @promptpandit.in\n\n#studyplan #examprep #studytips #aiforstudents #promptengineering #promptpandit",
+      "qa_passed": true,
+      "status": "queued"
+    },
+    {
+      "id": "2026-11-30_reel_job-application-email-prompt",
+      "type": "reel",
+      "publish_at_ist": "2026-11-30T13:00:00+05:30",
+      "publish_at_utc": "2026-11-30T07:30:00+00:00",
+      "files": [
+        "content/queue/2026-11-30_reel_job-application-email-prompt/reel.mp4"
+      ],
+      "caption": "Job application email: Galat vs Sahi ✉️\n\nRole, company, degree aur skills do, aur short, polite email maango. Bhejne se pehle ek baar khud padh lo.\n\nKis role ke liye apply kar rahe ho? 👇\n\nSave karo, follow karo @promptpandit.in\n\n#jobsearch #jobapplication #emailwriting #freshers #promptengineering #promptpandit",
+      "qa_passed": true,
+      "status": "queued"
+    },
+    {
+      "id": "2026-11-30_carousel_gemini-notebook-study-tool-from-your-own",
+      "type": "carousel",
+      "publish_at_ist": "2026-11-30T19:30:00+05:30",
+      "publish_at_utc": "2026-11-30T14:00:00+00:00",
+      "files": [
+        "content/queue/2026-11-30_carousel_gemini-notebook-study-tool-from-your-own/slide_01.jpg",
+        "content/queue/2026-11-30_carousel_gemini-notebook-study-tool-from-your-own/slide_02.jpg",
+        "content/queue/2026-11-30_carousel_gemini-notebook-study-tool-from-your-own/slide_03.jpg",
+        "content/queue/2026-11-30_carousel_gemini-notebook-study-tool-from-your-own/slide_04.jpg",
+        "content/queue/2026-11-30_carousel_gemini-notebook-study-tool-from-your-own/slide_05.jpg",
+        "content/queue/2026-11-30_carousel_gemini-notebook-study-tool-from-your-own/slide_06.jpg",
+        "content/queue/2026-11-30_carousel_gemini-notebook-study-tool-from-your-own/slide_07.jpg"
+      ],
+      "caption": "Apne notes se AI tutor banao 📒\n\nGemini Notebook (notebooklm.google) mein apne sources add karo aur sawaal pucho. Answers aapke diye material pe based hote hain. Audio Overviews, flashcards aur quizzes bhi.\n\nAnswers hamesha apni book se match karo. Try kiya hai? 👇\n\nSave karo, follow karo @promptpandit.in\n\nSource: notebooklm.google (official site)\n\n#notebooklm #gemini #aitools #studytips #aiforstudents #promptpandit",
+      "qa_passed": true,
+      "status": "queued"
+    },
+    {
+      "id": "2026-12-01_reel_mock-interview-practice-prompt",
+      "type": "reel",
+      "publish_at_ist": "2026-12-01T13:00:00+05:30",
+      "publish_at_utc": "2026-12-01T07:30:00+00:00",
+      "files": [
+        "content/queue/2026-12-01_reel_mock-interview-practice-prompt/reel.mp4"
+      ],
+      "caption": "Interview se darr lagta hai? 😅\n\nAI ko interviewer banao: ek time pe ek sawaal, aur har answer ke baad feedback + better version. Answers zor se bolo, phir type karo.\n\nAapka next interview kis role ke liye hai? 👇\n\nSave karo, follow karo @promptpandit.in\n\n#interviewtips #mockinterview #freshers #jobsearch #promptengineering #promptpandit",
+      "qa_passed": true,
+      "status": "queued"
+    },
+    {
+      "id": "2026-12-01_carousel_debugging-code-error-prompt",
+      "type": "carousel",
+      "publish_at_ist": "2026-12-01T19:30:00+05:30",
+      "publish_at_utc": "2026-12-01T14:00:00+00:00",
+      "files": [
+        "content/queue/2026-12-01_carousel_debugging-code-error-prompt/slide_01.jpg",
+        "content/queue/2026-12-01_carousel_debugging-code-error-prompt/slide_02.jpg",
+        "content/queue/2026-12-01_carousel_debugging-code-error-prompt/slide_03.jpg",
+        "content/queue/2026-12-01_carousel_debugging-code-error-prompt/slide_04.jpg",
+        "content/queue/2026-12-01_carousel_debugging-code-error-prompt/slide_05.jpg",
+        "content/queue/2026-12-01_carousel_debugging-code-error-prompt/slide_06.jpg",
+        "content/queue/2026-12-01_carousel_debugging-code-error-prompt/slide_07.jpg"
+      ],
+      "caption": "Code mein error? AI se aise pucho 💻\n\nGalat: 'Fix it.'\nSahi: error + code + expected output do, aur pehle cause samjhane ko bolo.\n\nAur haan: passwords ya API keys kabhi paste mat karo. Aap kaunsi language seekh rahe ho? 👇\n\nSave karo, follow karo @promptpandit.in\n\n#coding #programming #debugging #python #promptengineering #promptpandit",
+      "qa_passed": true,
+      "status": "queued"
+    },
+    {
+      "id": "2026-12-02_reel_grammarly-for-clear-emails-and-resumes",
+      "type": "reel",
+      "publish_at_ist": "2026-12-02T13:00:00+05:30",
+      "publish_at_utc": "2026-12-02T07:30:00+00:00",
+      "files": [
+        "content/queue/2026-12-02_reel_grammarly-for-clear-emails-and-resumes/reel.mp4"
+      ],
+      "caption": "English email likhte waqt doubt hota hai? ✍️\n\nGrammarly grammar, structure aur clarity mein help karta hai, ek click mein paragraph rewrite karta hai, aur tone suggestions deta hai. Sign up free hai.\n\nResume ya email: pehle kahan try karoge? 👇\n\nSave karo, follow karo @promptpandit.in\n\nSource: grammarly.com (official site)\n\n#grammarly #englishwriting #aitools #emailwriting #jobsearch #promptpandit",
+      "qa_passed": true,
+      "status": "queued"
+    },
+    {
+      "id": "2026-12-02_carousel_ai-as-english-speaking-practice-partner-",
+      "type": "carousel",
+      "publish_at_ist": "2026-12-02T19:30:00+05:30",
+      "publish_at_utc": "2026-12-02T14:00:00+00:00",
+      "files": [
+        "content/queue/2026-12-02_carousel_ai-as-english-speaking-practice-partner-/slide_01.jpg",
+        "content/queue/2026-12-02_carousel_ai-as-english-speaking-practice-partner-/slide_02.jpg",
+        "content/queue/2026-12-02_carousel_ai-as-english-speaking-practice-partner-/slide_03.jpg",
+        "content/queue/2026-12-02_carousel_ai-as-english-speaking-practice-partner-/slide_04.jpg",
+        "content/queue/2026-12-02_carousel_ai-as-english-speaking-practice-partner-/slide_05.jpg",
+        "content/queue/2026-12-02_carousel_ai-as-english-speaking-practice-partner-/slide_06.jpg",
+        "content/queue/2026-12-02_carousel_ai-as-english-speaking-practice-partner-/slide_07.jpg"
+      ],
+      "caption": "English bolne ka partner nahi mil raha? 🗣️\n\nAI ko speaking partner banao: ek time pe ek sawaal, aur har reply ke baad gentle correction. Apni repeated mistakes note karo.\n\nAaj kis topic pe practice karoge? 👇\n\nSave karo, follow karo @promptpandit.in\n\n#spokenenglish #englishspeaking #aiforstudents #promptengineering #communicationskills #promptpandit",
+      "qa_passed": true,
+      "status": "queued"
+    }
+  ]
+}

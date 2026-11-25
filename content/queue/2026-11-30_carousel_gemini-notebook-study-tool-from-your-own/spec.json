@@ -1,0 +1,54 @@
+{
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Apne notes se *AI tutor* banao",
+      "subtitle": "Pandit ji ka Tool: Gemini Notebook (notebooklm.google)."
+    },
+    {
+      "type": "content",
+      "kicker": "Kya hai",
+      "title": "Gemini *Notebook*",
+      "body": "A Google tool where you add your own sources and ask questions about them. Its answers are grounded in the information you provide."
+    },
+    {
+      "type": "content",
+      "kicker": "Features",
+      "title": "Kya kya *bana* sakta hai?",
+      "bullets": [
+        "*Audio Overviews*: sources ka summary suno",
+        "*Flashcards* aur *quizzes*",
+        "*Video Overviews*"
+      ]
+    },
+    {
+      "type": "content",
+      "kicker": "Shuruaat",
+      "title": "Kahan se *start* karein?",
+      "body": "Not sure where to begin? The site has featured public notebooks you can explore first."
+    },
+    {
+      "type": "content",
+      "kicker": "Privacy",
+      "title": "Data ka *kya*?",
+      "body": "The site says that for individual users, your data is not used for training unless you share feedback."
+    },
+    {
+      "type": "content",
+      "kicker": "Pandit ji ki salah",
+      "title": "Exam ke liye *use*",
+      "bullets": [
+        "Apne *class notes* add karo",
+        "Chapter-wise *quiz* banao",
+        "Answers *book* se match karo"
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Kaam ka laga?",
+      "text": "Har hafte naye AI tools, students ke liye."
+    }
+  ],
+  "id": "2026-11-30_carousel_gemini-notebook-study-tool-from-your-own",
+  "series": "Pandit ji ka Tool"
+}

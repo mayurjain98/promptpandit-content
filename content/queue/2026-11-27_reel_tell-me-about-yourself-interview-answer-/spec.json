@@ -1,0 +1,36 @@
+{
+  "style": "comparison",
+  "title": "Interview *intro* prompt",
+  "galat": "Write my tell me about yourself answer.",
+  "sahi": "Write a 60-second 'Tell me about yourself' for a [fresher data analyst] role. Use my [degree], [1 project] and [2 skills].",
+  "verdict": "Apni details do, *apna* jawaab pao.",
+  "scenes": [
+    {
+      "voice": "Galat vs sahi prompt. Interview ka sabse common sawaal: tell me about yourself.",
+      "voice_tts": "ग़लत वर्सेस सही प्रॉम्प्ट। इंटरव्यू का सबसे कॉमन सवाल: टेल मी अबाउट योरसेल्फ़।",
+      "reveal": "title"
+    },
+    {
+      "voice": "Zyadatar log likhte hain: write my tell me about yourself answer.",
+      "voice_tts": "ज़्यादातर लोग लिखते हैं: राइट माई टेल मी अबाउट योरसेल्फ़ आंसर।",
+      "reveal": "galat"
+    },
+    {
+      "voice": "AI aapko jaanta hi nahi. Toh jawaab generic aur robotic lagega.",
+      "voice_tts": "एआई आपको जानता ही नहीं। तो जवाब जेनेरिक और रोबोटिक लगेगा।",
+      "reveal": "galat"
+    },
+    {
+      "voice": "Sahi tareeka: role batao, apni degree, ek project aur do skills do, aur sixty second ka simple answer maango.",
+      "voice_tts": "सही तरीका: रोल बताओ, अपनी डिग्री, एक प्रोजेक्ट और दो स्किल्स दो, और सिक्सटी सेकंड का सिंपल आंसर मांगो।",
+      "reveal": "sahi"
+    },
+    {
+      "voice": "Phir use apne words mein bolke practice karo. Save karo, follow karo Prompt Pandit.",
+      "voice_tts": "फिर उसे अपने वर्ड्स में बोलके प्रैक्टिस करो। सेव करो, फ़ॉलो करो प्रॉम्प्ट पंडित।",
+      "reveal": "verdict"
+    }
+  ],
+  "id": "2026-11-27_reel_tell-me-about-yourself-interview-answer-",
+  "series": "Galat vs Sahi Prompt"
+}

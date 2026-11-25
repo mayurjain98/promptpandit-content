@@ -101,7 +101,8 @@ def capture_site(url: str, out: Path, max_height: int = 7000):
     with sync_playwright() as p:
         b = p.chromium.launch()
         page = b.new_page(viewport={"width": 900, "height": 900}, device_scale_factor=2)  # narrower = bigger text in frame; 2x = crisp
-        page.goto(url, wait_until="networkidle", timeout=60000)
+        page.goto(url, wait_until="load", timeout=60000)  # not networkidle: some sites never go idle
+        page.wait_for_timeout(3500)
         # Prefer declining cookie banners; if there's no decline option, hide them.
         for label in ("Reject all", "Reject", "Decline", "Only necessary", "No thanks"):
             btn = page.get_by_role("button", name=re.compile(label, re.I))
@@ -111,11 +112,28 @@ def capture_site(url: str, out: Path, max_height: int = 7000):
                     break
                 except Exception:
                     pass
+        # Close sign-in pop-ups and other dialogs.
+        page.keyboard.press("Escape")
+        for name in ("Close", "Dismiss", "No thanks"):
+            btn = page.get_by_role("button", name=re.compile(f"^{name}$", re.I))
+            if btn.count():
+                try:
+                    btn.first.click(timeout=1500)
+                except Exception:
+                    pass
         page.add_style_tag(content="[id*=cookie i],[class*=cookie i],[id*=consent i],[class*=consent i]{display:none!important}")
         # Scroll through once so lazy-loaded images appear.
         page.evaluate("""async () => { for (let y = 0; y < document.body.scrollHeight; y += 600) {
                          window.scrollTo(0, y); await new Promise(r => setTimeout(r, 120)); } window.scrollTo(0, 0); }""")
         page.wait_for_timeout(1500)
+        # Pop-ups that appear late (sign-in modals): hide anything marked as a dialog.
+        page.add_style_tag(content="[role=dialog],[aria-modal=true]{display:none!important}")
+        # Also hide floating sign-in panels ("Continue with Google/Apple...").
+        page.evaluate("""() => { for (const el of document.querySelectorAll('body *')) {
+            const pos = getComputedStyle(el).position;
+            if ((pos === 'fixed' || pos === 'absolute') && /Continue with (Google|Apple|email)/i.test(el.innerText || '')
+                && el.getBoundingClientRect().width < window.innerWidth * 0.9) el.style.display = 'none'; } }""")
+        page.wait_for_timeout(300)
         height = min(page.evaluate("document.body.scrollHeight"), max_height)
         page.screenshot(path=str(out), clip={"x": 0, "y": 0, "width": 900, "height": height}, full_page=True)
         b.close()

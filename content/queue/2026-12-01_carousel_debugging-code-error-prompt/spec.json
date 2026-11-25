@@ -1,0 +1,51 @@
+{
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Code mein *error*? Aise pucho",
+      "subtitle": "Galat vs Sahi: debugging prompt."
+    },
+    {
+      "type": "before_after",
+      "title": "Fark dekho",
+      "before": "My code is not working. Fix it.",
+      "after": "My Python code gives this error: [paste error]. Here is the code: [paste code]. Explain the cause simply, then show the fix.",
+      "why": "Error + code + 'explain' = seekhoge bhi."
+    },
+    {
+      "type": "content",
+      "kicker": "Kyun",
+      "title": "AI ko *andaaza* na lagane do",
+      "body": "Without the exact error message and code, the AI has to guess. Paste both, and say what you expected to happen."
+    },
+    {
+      "type": "prompt",
+      "title": "Ye template *save* karo",
+      "prompt": "Language: [Python/Java/C++]\nWhat I expected: [expected output]\nWhat happened: [actual output or error]\nCode:\n[paste code]\n\nExplain the bug in simple words first. Then give the fixed code with comments.",
+      "note": "Pehle samjho, phir fix copy karo."
+    },
+    {
+      "type": "content",
+      "kicker": "Pro tips",
+      "title": "Smart *debugging*",
+      "bullets": [
+        "Sirf *relevant* part paste karo",
+        "*Passwords / API keys* kabhi paste mat karo",
+        "Fix ko khud *run* karke check karo"
+      ]
+    },
+    {
+      "type": "content",
+      "kicker": "Yaad rakho",
+      "title": "Copy nahi, *samjho*",
+      "body": "After every bug, ask: why did this fix work? That habit helps in coding interviews too."
+    },
+    {
+      "type": "cta",
+      "title": "Kaam ka laga?",
+      "text": "Coding, study, career: roz ek naya prompt."
+    }
+  ],
+  "id": "2026-12-01_carousel_debugging-code-error-prompt",
+  "series": "Galat vs Sahi Prompt"
+}

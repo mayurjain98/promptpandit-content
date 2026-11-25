@@ -1,0 +1,43 @@
+{
+  "style": "kinetic",
+  "scenes": [
+    {
+      "voice": "Interview se darr lagta hai? Ye prompt try karo.",
+      "voice_tts": "इंटरव्यू से डर लगता है? ये प्रॉम्प्ट ट्राई करो।",
+      "text": "Interview se *darr*?"
+    },
+    {
+      "voice": "AI ko bolo: act as an interviewer for a fresher software role.",
+      "voice_tts": "एआई को बोलो: एक्ट ऐज़ एन इंटरव्यूअर फ़ॉर अ फ़्रेशर सॉफ़्टवेयर रोल।",
+      "kicker": "Copy this",
+      "text": "'Act as an *interviewer* for [role]'"
+    },
+    {
+      "voice": "Ask me one question at a time, and wait for my answer.",
+      "voice_tts": "आस्क मी वन क्वेश्चन एट अ टाइम, एंड वेट फ़ॉर माई आंसर।",
+      "text": "*One question* at a time"
+    },
+    {
+      "voice": "Har answer ke baad: give feedback and a better version.",
+      "voice_tts": "हर आंसर के बाद: गिव फ़ीडबैक एंड अ बेटर वर्ज़न।",
+      "text": "Har answer pe *feedback*"
+    },
+    {
+      "voice": "Answers zor se bolo, phir type karo. Speaking practice bhi ho jayegi.",
+      "voice_tts": "आंसर्स ज़ोर से बोलो, फिर टाइप करो। स्पीकिंग प्रैक्टिस भी हो जाएगी।",
+      "text": "Bolo, phir *type* karo"
+    },
+    {
+      "voice": "Roz thodi practice karo, confidence khud aayega.",
+      "voice_tts": "रोज़ थोड़ी प्रैक्टिस करो, कॉन्फ़िडेंस खुद आएगा।",
+      "text": "Roz *practice*"
+    },
+    {
+      "voice": "Save karo, follow karo Prompt Pandit.",
+      "voice_tts": "सेव करो, फ़ॉलो करो प्रॉम्प्ट पंडित।",
+      "text": "Save karo, *follow* karo"
+    }
+  ],
+  "id": "2026-12-01_reel_mock-interview-practice-prompt",
+  "series": "Prompt of the Day"
+}

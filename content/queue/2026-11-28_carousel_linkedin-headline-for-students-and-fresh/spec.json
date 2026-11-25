@@ -1,0 +1,52 @@
+{
+  "slides": [
+    {
+      "type": "cover",
+      "title": "LinkedIn headline: *Galat vs Sahi*",
+      "subtitle": "Profile pe sabse pehle dikhne wali line."
+    },
+    {
+      "type": "before_after",
+      "title": "Example 1",
+      "before": "Student at XYZ College",
+      "after": "B.Com Final Year | Excel & Tally | Looking for Accounts Internships",
+      "why": "Kya padh rahe ho + skills + kya dhoondh rahe ho."
+    },
+    {
+      "type": "before_after",
+      "title": "Example 2",
+      "before": "Hardworking and passionate person",
+      "after": "Aspiring Data Analyst | SQL, Python, Power BI | Projects on Sales Data",
+      "why": "Adjectives nahi, proof do. Sirf sach likho."
+    },
+    {
+      "type": "prompt",
+      "title": "Apni headline *AI se* banwao",
+      "prompt": "Write 5 LinkedIn headlines for me, each under 200 characters.\nRole I want: [target role]\nMy degree and year: [degree]\nTop skills: [3 skills]\nOne project or achievement: [project]\nNo buzzwords like 'passionate' or 'hardworking'.",
+      "note": "Jo details sach hain, sirf wahi do."
+    },
+    {
+      "type": "content",
+      "kicker": "Choose kaise karein",
+      "title": "Best headline ki *pehchaan*",
+      "bullets": [
+        "Jo *sach* ho wahi rakho",
+        "Target *role* ka naam ho",
+        "Skills wahi jo *resume* mein hain"
+      ]
+    },
+    {
+      "type": "content",
+      "kicker": "Bonus",
+      "title": "About section *bhi*",
+      "body": "Use the same details to ask AI for a 3-line About summary. Then edit it so it sounds like you."
+    },
+    {
+      "type": "cta",
+      "title": "Kaam ka laga?",
+      "text": "Resume, LinkedIn, interview: sab ke prompts yahin."
+    }
+  ],
+  "id": "2026-11-28_carousel_linkedin-headline-for-students-and-fresh",
+  "series": "Galat vs Sahi Prompt"
+}

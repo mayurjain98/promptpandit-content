@@ -1,0 +1,45 @@
+{
+  "style": "kinetic",
+  "scenes": [
+    {
+      "voice": "Koi topic samajh nahi aa raha? Ye prompt try karo.",
+      "voice_tts": "कोई टॉपिक समझ नहीं आ रहा? ये प्रॉम्प्ट ट्राई करो।",
+      "text": "Topic samajh *nahi* aa raha?"
+    },
+    {
+      "voice": "AI ko bolo: explain this topic like I am a beginner.",
+      "voice_tts": "एआई को बोलो: एक्सप्लेन दिस टॉपिक लाइक आई एम अ बिगिनर।",
+      "kicker": "Step 1",
+      "text": "'Explain like I'm a *beginner*'"
+    },
+    {
+      "voice": "Phir likho: give me one real-life example from India.",
+      "voice_tts": "फिर लिखो: गिव मी वन रियल लाइफ़ एग्ज़ाम्पल फ़्रॉम इंडिया।",
+      "kicker": "Step 2",
+      "text": "Ek *real-life example* maango"
+    },
+    {
+      "voice": "Aur last mein: ask me three questions to check if I understood.",
+      "voice_tts": "और लास्ट में: आस्क मी थ्री क्वेश्चन्स टू चेक इफ़ आई अंडरस्टुड।",
+      "kicker": "Step 3",
+      "text": "AI se *quiz* karwao"
+    },
+    {
+      "voice": "Galat jawaab diya? Toh bolo: explain this part again.",
+      "voice_tts": "ग़लत जवाब दिया? तो बोलो: एक्सप्लेन दिस पार्ट अगेन।",
+      "text": "Galat? *Dobara* samjho"
+    },
+    {
+      "voice": "Samjho, example dekho, quiz do. Padhai pakki.",
+      "voice_tts": "समझो, एग्ज़ाम्पल देखो, क्विज़ दो। पढ़ाई पक्की।",
+      "text": "Samjho. Example. *Quiz.*"
+    },
+    {
+      "voice": "Save karo, follow karo Prompt Pandit.",
+      "voice_tts": "सेव करो, फ़ॉलो करो प्रॉम्प्ट पंडित।",
+      "text": "Save karo, *follow* karo"
+    }
+  ],
+  "id": "2026-11-28_reel_explain-like-a-beginner-plus-example-plu",
+  "series": "Prompt of the Day"
+}

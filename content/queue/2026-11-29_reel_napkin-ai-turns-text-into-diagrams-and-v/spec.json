@@ -1,0 +1,45 @@
+{
+  "style": "tool_demo",
+  "tool": "*Napkin* AI",
+  "site_url": "https://www.napkin.ai/",
+  "scenes": [
+    {
+      "voice": "Notes ko diagram mein badalna hai? Pandit ji ka tool: Napkin AI.",
+      "voice_tts": "नोट्स को डायग्राम में बदलना है? पंडित जी का टूल: नैपकिन ए आई।",
+      "text": "Text se *visuals*",
+      "scroll": 0
+    },
+    {
+      "voice": "Apna text paste ya import karo.",
+      "voice_tts": "अपना टेक्स्ट पेस्ट या इम्पोर्ट करो।",
+      "text": "Text *paste* karo",
+      "scroll": 0.12
+    },
+    {
+      "voice": "Click karo, aur Napkin aapke text ke hisaab se visuals suggest karta hai. Jo pasand aaye, wo chuno.",
+      "voice_tts": "क्लिक करो, और नैपकिन आपके टेक्स्ट के हिसाब से विज़ुअल्स सजेस्ट करता है। जो पसंद आए, वो चुनो।",
+      "text": "*Click*, phir choose karo",
+      "scroll": 0.17
+    },
+    {
+      "voice": "Kuch bhi fixed nahi hai. Jo chaho, badal sakte ho.",
+      "voice_tts": "कुछ भी फ़िक्स्ड नहीं है। जो चाहो, बदल सकते हो।",
+      "text": "Apne hisaab se *edit*",
+      "scroll": 0.45
+    },
+    {
+      "voice": "Phir PPT, PNG, PDF ya SVG mein export karo.",
+      "voice_tts": "फिर पी पी टी, पी एन जी, पी डी एफ़ या एस वी जी में एक्सपोर्ट करो।",
+      "text": "Export: *PPT, PNG, PDF, SVG*",
+      "scroll": 0.79
+    },
+    {
+      "voice": "Presentation aur project ke liye mast hai. Napkin dot AI pe free shuru karo. Save karo, follow karo Prompt Pandit.",
+      "voice_tts": "प्रेज़ेंटेशन और प्रोजेक्ट के लिए मस्त है। नैपकिन डॉट ए आई पे फ़्री शुरू करो। सेव करो, फ़ॉलो करो प्रॉम्प्ट पंडित।",
+      "text": "*napkin.ai*",
+      "scroll": 0.98
+    }
+  ],
+  "id": "2026-11-29_reel_napkin-ai-turns-text-into-diagrams-and-v",
+  "series": "Pandit ji ka Tool"
+}

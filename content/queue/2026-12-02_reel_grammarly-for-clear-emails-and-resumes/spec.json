@@ -1,0 +1,45 @@
+{
+  "style": "tool_demo",
+  "tool": "*Grammarly*",
+  "site_url": "https://www.grammarly.com/",
+  "scenes": [
+    {
+      "voice": "English email likhte waqt doubt hota hai? Pandit ji ka tool: Grammarly.",
+      "voice_tts": "इंग्लिश ईमेल लिखते वक़्त डाउट होता है? पंडित जी का टूल: ग्रामरली।",
+      "text": "Writing mein *doubt*?",
+      "scroll": 0
+    },
+    {
+      "voice": "Ye grammar, structure aur clarity theek karne mein help karta hai.",
+      "voice_tts": "ये ग्रामर, स्ट्रक्चर और क्लैरिटी ठीक करने में हेल्प करता है।",
+      "text": "*Proofreading*",
+      "scroll": 0.11
+    },
+    {
+      "voice": "Paragraph ko ek click mein rewrite karke clear bana sakte ho.",
+      "voice_tts": "पैराग्राफ़ को एक क्लिक में रीराइट करके क्लियर बना सकते हो।",
+      "text": "One-click *rewrites*",
+      "scroll": 0.11
+    },
+    {
+      "voice": "Tone suggestions bhi milte hain, taaki message situation ke hisaab se lage.",
+      "voice_tts": "टोन सजेशन्स भी मिलते हैं, ताकि मैसेज सिचुएशन के हिसाब से लगे।",
+      "text": "*Tone* suggestions",
+      "scroll": 0.31
+    },
+    {
+      "voice": "Sign up free hai. Resume, email aur cover letter, sab pe try karo.",
+      "voice_tts": "साइन अप फ़्री है। रिज़्यूमे, ईमेल और कवर लेटर, सब पे ट्राई करो।",
+      "text": "Sign up *free*",
+      "scroll": 0.52
+    },
+    {
+      "voice": "Grammarly dot com. Save karo, follow karo Prompt Pandit.",
+      "voice_tts": "ग्रामरली डॉट कॉम। सेव करो, फ़ॉलो करो प्रॉम्प्ट पंडित।",
+      "text": "*grammarly.com*",
+      "scroll": 0
+    }
+  ],
+  "id": "2026-12-02_reel_grammarly-for-clear-emails-and-resumes",
+  "series": "Pandit ji ka Tool"
+}

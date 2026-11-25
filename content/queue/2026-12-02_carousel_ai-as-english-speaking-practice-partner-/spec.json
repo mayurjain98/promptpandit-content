@@ -1,0 +1,51 @@
+{
+  "slides": [
+    {
+      "type": "cover",
+      "title": "AI ko banao *English speaking partner*",
+      "subtitle": "Daily practice prompt."
+    },
+    {
+      "type": "content",
+      "kicker": "Problem",
+      "title": "Bolne ka *mauka* nahi milta?",
+      "body": "Speaking improves with practice. If you don't have a partner, an AI chat can be one: by text, or by voice where the app supports it."
+    },
+    {
+      "type": "prompt",
+      "title": "Ye prompt *copy* karo",
+      "prompt": "Be my English speaking partner. Talk to me about [topic] in simple English.\nAsk one question at a time.\nAfter each reply, gently correct my mistakes and show a better sentence.\nMy level: [beginner / intermediate].",
+      "note": "Level sahi batao, taaki sawaal na zyada easy hon, na zyada tough."
+    },
+    {
+      "type": "content",
+      "kicker": "Topics",
+      "title": "Ye topics *try* karo",
+      "bullets": [
+        "Apna *introduction*",
+        "Apna *college / job* experience",
+        "Weekend *plans*"
+      ]
+    },
+    {
+      "type": "before_after",
+      "title": "Fark dekho",
+      "before": "Teach me English.",
+      "after": "Chat with me about [my weekend] in simple English, one question at a time, and correct my mistakes after each reply.",
+      "why": "Topic + format + correction = real practice."
+    },
+    {
+      "type": "content",
+      "kicker": "Pandit ji ki salah",
+      "title": "Roz *thodi* practice",
+      "body": "Do a short chat every day. Note your repeated mistakes and practise those sentences out loud."
+    },
+    {
+      "type": "cta",
+      "title": "Kaam ka laga?",
+      "text": "Roz ek naya prompt: study, career, English."
+    }
+  ],
+  "id": "2026-12-02_carousel_ai-as-english-speaking-practice-partner-",
+  "series": "Prompt of the Day"
+}

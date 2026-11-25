@@ -1,0 +1,54 @@
+{
+  "slides": [
+    {
+      "type": "cover",
+      "title": "AI tutor jo *seedha answer* nahi deta",
+      "subtitle": "Khanmigo: Khan Academy ka AI tutor."
+    },
+    {
+      "type": "content",
+      "kicker": "Kya hai",
+      "title": "*Khanmigo* kya hai?",
+      "body": "Khanmigo is Khan Academy's AI-powered teaching assistant and tutor."
+    },
+    {
+      "type": "content",
+      "kicker": "Khaas baat",
+      "title": "Answer nahi, *sochna* sikhata hai",
+      "body": "For learners, Khanmigo challenges you to think critically and solve problems without giving you direct answers."
+    },
+    {
+      "type": "content",
+      "kicker": "Kya seekh sakte ho",
+      "title": "Ek tool, kai skills",
+      "bullets": [
+        "*Algebra* jaise maths topics",
+        "*SQL* jaisi coding skills",
+        "*Essay* writing"
+      ]
+    },
+    {
+      "type": "content",
+      "kicker": "Writing Coach",
+      "title": "Writing *practice* ke liye",
+      "body": "Khanmigo also has an AI-enhanced writing practice and instruction tool. Its site says you can sign up for it for free."
+    },
+    {
+      "type": "content",
+      "kicker": "Pandit ji ki salah",
+      "title": "Kaise use karein?",
+      "bullets": [
+        "Pehle *khud* try karo",
+        "*Hint* maango, answer nahi",
+        "Availability aur price *site pe* check karo"
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Kaam ka laga?",
+      "text": "Har hafte naye AI tools, students ke liye."
+    }
+  ],
+  "id": "2026-11-27_carousel_khanmigo-ai-tutor-that-guides-without-di",
+  "series": "Pandit ji ka Tool"
+}
