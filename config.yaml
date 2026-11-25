@@ -1,0 +1,37 @@
+# Prompt Pandit - central config
+account:
+  handle: "@promptpandit.in"
+  display_name: "Prompt Pandit | AI Tools & Prompts"
+  cta: "Save karo, follow karo @promptpandit.in"
+
+brand:
+  profile: templates/brand/promptpandit_final_profile.png
+  wordmark_black: templates/brand/promptpandit_final_wordmark_black.png
+  wordmark_transparent: templates/brand/promptpandit_final_wordmark_transparent.png
+  watermark: templates/brand/promptpandit_final_watermark_transparent.png
+  watermark_width_pct: 8          # bottom-right, % of frame width
+  colors:
+    bg_center: "#262626"
+    bg_edge: "#000000"
+    lime_top: "#EAFF7A"
+    lime_mid: "#C6FF00"
+    lime_bottom: "#8FC400"
+    text: "#FFFFFF"
+  fonts:
+    heading: "Poppins"            # Bold
+    body: "Inter"
+
+# Posting times in IST (UTC+5:30). Workflows convert to UTC.
+slots:
+  reel: "13:00"                   # 07:30 UTC
+  carousel: "19:30"               # 14:00 UTC
+
+series:
+  - Prompt of the Day
+  - Pandit ji ka Tool
+  - Galat vs Sahi Prompt
+
+media:
+  # Public raw URL base for Meta to fetch media
+  raw_base: "https://raw.githubusercontent.com/OWNER/REPO/main"
+  tts_voice: models/piper/en_US-lessac-medium.onnx

@@ -1,0 +1,6 @@
+playwright
+piper-tts
+requests
+pyyaml
+python-dotenv
+pillow
