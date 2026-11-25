@@ -1,0 +1,63 @@
+# Daily publisher: posts whatever is due in content/queue/schedule.json.
+# IST = UTC + 5:30
+#   Reel     13:00 IST = 07:30 UTC   (catch-up 09:00 UTC)
+#   Carousel 19:30 IST = 14:00 UTC   (catch-up 15:30 UTC)
+# GitHub can delay scheduled runs; the catch-up runs publish anything still due.
+# Pause any time by committing an empty file at data/pause.flag.
+name: Publish
+
+on:
+  schedule:
+    - cron: "30 7 * * *"
+    - cron: "0 9 * * *"
+    - cron: "0 14 * * *"
+    - cron: "30 15 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run: create containers only, don't post"
+        type: boolean
+        default: true
+      item_id:
+        description: "Only this item id (optional; required for dry run)"
+        required: false
+
+permissions:
+  contents: write   # commit the log + move published files
+  issues: write     # open an issue after 2 failures in a row
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests pyyaml
+
+      - name: Publish due items
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ARGS=""
+          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          if [ -n "${{ inputs.item_id }}" ]; then ARGS="$ARGS --id ${{ inputs.item_id }}"; fi
+          python scripts/publish.py $ARGS
+
+      - name: Commit log and moved files
+        if: always() && inputs.dry_run != true
+        run: |
+          git config user.name "promptpandit-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A data content
+          if git diff --cached --quiet; then echo "No changes."; exit 0; fi
+          git commit -m "Publish log $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
