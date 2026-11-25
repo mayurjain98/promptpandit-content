@@ -1,0 +1,80 @@
+<!doctype html>
+<!--
+  Reel style: TOOL DEMO ("Pandit ji ka Tool")
+  Spec: {
+    style: "tool_demo", series?, tool: "Tool name", site_url: "https://official-site",
+    scenes: [ { voice, caption?, text: "on-screen headline", scroll: 0..1 } ]
+  }
+  render_reel.py screenshots the official site (full page) and passes it in
+  as spec.site_image. Each scene scrolls the page to its `scroll` position
+  (0 = top, 1 = bottom), easing smoothly from the previous one.
+-->
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../brand/brand.css">
+<link rel="stylesheet" href="reel_base.css">
+<style>
+  .head { position: absolute; top: 120px; left: 70px; right: 70px; }
+  .head .pill { font-size: 30px; }
+  .head h1 { font-size: 78px; margin-top: 22px; }
+  .line { position: absolute; top: 335px; left: 70px; right: 70px; height: 80px; }
+  .line div { position: absolute; inset: 0; font: 700 46px/1.25 "Poppins"; opacity: 0; }
+  /* Browser frame */
+  .browser { position: absolute; left: 70px; right: 70px; top: 450px; height: 910px; overflow: hidden; border-radius: 30px; }
+  .browser .bar { height: 64px; display: flex; align-items: center; gap: 12px; padding: 0 26px; background: #1b1b1b; border-bottom: 1px solid rgba(255,255,255,.08); position: relative; z-index: 2; }
+  .browser .bar i { width: 16px; height: 16px; border-radius: 50%; background: #3a3a3a; }
+  .browser .bar i:first-child { background: var(--lime-mid); }
+  .browser .url { margin-left: 18px; flex: 1; height: 38px; border-radius: 19px; background: #0f0f0f; color: #cfcfcf;
+                  font: 500 22px/38px "Inter"; padding: 0 20px; white-space: nowrap; overflow: hidden; }
+  .browser .view { position: absolute; top: 64px; left: 0; right: 0; bottom: 0; overflow: hidden; background: #fff; }
+  .browser .view img { width: 100%; display: block; will-change: transform; }
+  .credit { position: absolute; top: 1372px; left: 70px; font: 500 22px "Inter"; color: #8a8a8a; }
+</style></head>
+<body><div class="canvas" id="reel"></div>
+<script src="reel_base.js"></script>
+<script>
+window.STYLE = {
+  build(spec, tl, stage) {
+    const host = new URL(spec.site_url).host.replace(/^www\./, "");
+    stage.innerHTML = `
+      <div class="head">
+        <span class="pill">${PP.fmt(spec.series || "Pandit ji ka Tool")}</span>
+        <h1>${PP.fmt(spec.tool)}</h1>
+      </div>
+      <div class="line">${spec.scenes.map((s, i) => `<div id="l${i}">${PP.fmt(s.text || "")}</div>`).join("")}</div>
+      <div class="card glow browser">
+        <div class="bar"><i></i><i></i><i></i><div class="url">https://${host}</div></div>
+        <div class="view"><img id="site" src="${spec.site_image}"></div>
+      </div>
+      <div class="credit">Screenshot: official site, ${host}</div>`;
+    const img = document.getElementById("site");
+    return img.complete ? null : new Promise(r => { img.onload = img.onerror = r; });
+  },
+
+  update(t, spec, tl) {
+    const img = document.getElementById("site");
+    const view = img.parentElement;
+    const maxScroll = Math.max(img.offsetHeight - view.clientHeight, 0);
+    // Scroll position: ease from previous scene's target to this one's.
+    let pos = 0, prev = 0;
+    tl.scenes.forEach((s, i) => {
+      const target = spec.scenes[i].scroll ?? prev;
+      if (t >= s.start) pos = PP.lerp(prev, target, PP.easeInOut(PP.prog(t, s.start, Math.max((s.end - s.start) * 0.8, 0.6))));
+      prev = target;
+    });
+    img.style.transform = `translateY(${-pos * maxScroll}px)`;
+
+    // Header in, then one headline per scene (cross-fade).
+    const hk = PP.easeOut(PP.prog(t, 0, 0.5));
+    document.querySelector(".head").style.opacity = hk;
+    const bk = PP.easeOut(PP.prog(t, 0.15, 0.6));
+    const br = document.querySelector(".browser");
+    br.style.opacity = bk; br.style.transform = `translateY(${(1 - bk) * 80}px) scale(${0.96 + 0.04 * bk})`;
+    tl.scenes.forEach((s, i) => {
+      const el = document.getElementById(`l${i}`);
+      const k = PP.easeOut(PP.prog(t, s.start, 0.35)) * (1 - PP.prog(t, s.end - 0.2, 0.2));
+      el.style.opacity = t >= s.start && t < s.end ? k : 0;
+      el.style.transform = `translateY(${(1 - k) * 20}px)`;
+    });
+  },
+};
+</script></body></html>

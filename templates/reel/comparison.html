@@ -1,0 +1,102 @@
+<!doctype html>
+<!--
+  Reel style: COMPARISON (Galat vs Sahi split screen, top/bottom for 9:16)
+  Spec: {
+    style: "comparison", series?, title,
+    galat: "weak prompt text", sahi: "strong prompt text", verdict: "why it works",
+    scenes: [ { voice, caption?, reveal: "title" | "galat" | "sahi" | "verdict" } ]
+  }
+  Each panel appears when the first scene with that `reveal` starts, and its
+  prompt types itself out during that scene. Panels stay on screen after that.
+-->
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../brand/brand.css">
+<link rel="stylesheet" href="reel_base.css">
+<style>
+  .head { position: absolute; top: 130px; left: 80px; right: 80px; text-align: center; }
+  .head .pill { font-size: 34px; margin-bottom: 30px; }
+  .head h1 { font-size: 74px; }
+  .panel { position: absolute; left: 70px; right: 70px; padding: 44px 48px; min-height: 360px; }
+  #galat { top: 470px; }
+  #sahi  { top: 880px; }
+  .panel .tag { display: flex; align-items: center; gap: 16px; font: 700 44px "Poppins"; margin-bottom: 20px; }
+  .panel .tag .ic { width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center; font-size: 36px; color: #0d0d0d; }
+  #galat .tag { color: var(--galat); }
+  #galat .ic { background: var(--galat); box-shadow: 0 0 30px rgba(255,107,107,.4); }
+  #sahi .tag { color: var(--lime-mid); }
+  #sahi .ic { background: var(--lime-grad); box-shadow: var(--glow); }
+  .panel p { font: 500 42px/1.45 "Inter"; color: #f2f2f2; }
+  #galat p { color: #bdbdbd; }
+  .panel p .ph { color: var(--lime-top); font-weight: 700; }
+  .cursor { display: inline-block; width: 4px; height: 1em; background: var(--lime-mid); vertical-align: -0.12em; margin-left: 4px; }
+  /* "VS" badge between panels */
+  .vs { position: absolute; left: 50%; top: 838px; transform: translate(-50%, 0); z-index: 20;
+        font: 700 40px "Poppins"; color: #0d0d0d; background: var(--lime-grad); width: 110px; height: 110px;
+        border-radius: 50%; display: grid; place-items: center; box-shadow: var(--glow), var(--shadow), inset 0 3px 0 rgba(255,255,255,.6); }
+  /* Verdict covers the caption area briefly, then captions take over */
+  .verdict { position: absolute; left: 70px; right: 70px; top: 1335px; text-align: center; font: 700 54px/1.25 "Poppins"; }
+  .dim { filter: saturate(.4) brightness(.7); }
+</style></head>
+<body><div class="canvas" id="reel"></div>
+<script src="reel_base.js"></script>
+<script>
+// Plain text for typing (markers removed); formatted HTML once fully typed.
+const plain = s => (s || "").replace(/\*/g, "");
+
+window.STYLE = {
+  build(spec, tl, stage) {
+    stage.innerHTML = `
+      <div class="head">
+        ${spec.series ? `<span class="pill">${PP.fmt(spec.series)}</span>` : ""}
+        <h1>${PP.fmt(spec.title)}</h1>
+      </div>
+      <div class="card bad panel" id="galat"><div class="tag"><span class="ic">✗</span>Galat</div><p></p></div>
+      <div class="vs">VS</div>
+      <div class="card glow panel" id="sahi"><div class="tag"><span class="ic">✓</span>Sahi</div><p></p></div>
+      <div class="verdict"></div>`;
+    // When does each reveal start / how long is its scene?
+    this.when = {};
+    spec.scenes.forEach((sc, i) => {
+      if (sc.reveal && !(sc.reveal in this.when)) this.when[sc.reveal] = tl.scenes[i];
+    });
+  },
+
+  // Panel slide-in + typewriter text.
+  panel(id, text, t, s, fromX) {
+    const el = document.getElementById(id);
+    if (!s) { el.style.opacity = 0; return; }
+    const k = PP.easeOut(PP.prog(t, s.start, 0.45));
+    el.style.opacity = k;
+    el.style.transform = `translateX(${(1 - k) * fromX}px)`;
+    const full = plain(text);
+    const typeK = PP.prog(t, s.start + 0.3, Math.max(s.voice * 0.85, 0.6));
+    const n = Math.floor(full.length * typeK);
+    const p = el.querySelector("p");
+    p.innerHTML = typeK >= 1 ? PP.fmt(text) : PP.fmt(full.slice(0, n).replace(/\[[^\]]*$/, "")) + '<span class="cursor"></span>';
+  },
+
+  update(t, spec, tl) {
+    const w = this.when;
+    const title = document.querySelector(".head");
+    const tk = PP.easeOut(PP.prog(t, w.title ? w.title.start : 0, 0.5));
+    title.style.opacity = tk; title.style.transform = `translateY(${(1 - tk) * -30}px)`;
+
+    this.panel("galat", spec.galat, t, w.galat, -120);
+    this.panel("sahi", spec.sahi, t, w.sahi, 120);
+    const vs = document.querySelector(".vs");
+    const vk = w.sahi ? PP.easeOut(PP.prog(t, w.sahi.start - 0.2, 0.35)) : 0;
+    vs.style.opacity = vk; vs.style.transform = `translate(-50%, 0) scale(${0.5 + 0.5 * vk}) rotate(${(1 - vk) * -90}deg)`;
+    // Once Sahi is shown, fade the Galat panel down a little.
+    document.getElementById("galat").classList.toggle("dim", !!w.sahi && t > w.sahi.start + 0.6);
+
+    const v = document.querySelector(".verdict");
+    if (w.verdict) {
+      const k = PP.easeOut(PP.prog(t, w.verdict.start, 0.4));
+      v.innerHTML = `<span class="lime">${PP.fmt(plain(spec.verdict))}</span>`;
+      v.style.opacity = k; v.style.transform = `scale(${0.9 + 0.1 * k})`;
+      // Move captions out of the way while the verdict is on screen.
+      document.querySelector(".captions").style.top = t >= w.verdict.start ? "1500px" : "1440px";
+    }
+  },
+};
+</script></body></html>

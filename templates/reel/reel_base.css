@@ -1,0 +1,29 @@
+/* Shared layout for all Reel styles (1080x1920).
+   Safe zone: Instagram overlays the bottom ~300px (username, caption)
+   and the right edge (buttons), so key content stays in y=200..1500. */
+
+body { width: 1080px; height: 1920px; overflow: hidden; }
+.canvas { width: 1080px; height: 1920px; }
+
+/* Spotlight that drifts slowly (moved from JS). */
+.spot { position: absolute; width: 1400px; height: 1400px; left: -160px; top: 120px; border-radius: 50%;
+        background: radial-gradient(circle, rgba(52,52,52,.9) 0%, rgba(30,30,30,.5) 40%, rgba(0,0,0,0) 70%); }
+
+/* Lime progress bar along the top. */
+.progress { position: absolute; left: 60px; right: 60px; top: 70px; height: 8px; border-radius: 8px; background: rgba(255,255,255,.1); z-index: 40; }
+.progress i { display: block; height: 100%; width: 0; border-radius: 8px; background: var(--lime-grad); box-shadow: var(--glow); }
+
+.stage { position: absolute; inset: 0; z-index: 10; }
+
+/* Burned-in captions: one short chunk at a time, current word lime. */
+.captions { position: absolute; left: 70px; right: 70px; top: 1440px; z-index: 30; text-align: center;
+            font: 700 58px/1.25 "Poppins"; text-shadow: 0 4px 0 #000, 0 0 24px rgba(0,0,0,.9); }
+.captions span { display: inline-block; margin: 0 8px; color: #fff; transition: none; }
+.captions span.on { color: var(--lime-mid); transform: scale(1.08); }
+
+/* Outro: black wordmark plate + follow CTA. */
+.outro { position: absolute; inset: 0; z-index: 45; display: flex; flex-direction: column; align-items: center; justify-content: center;
+         gap: 60px; background: radial-gradient(ellipse 80% 55% at 50% 45%, #262626 0%, #000 100%); opacity: 0; }
+.outro img { width: 820px; border-radius: 36px; border: 1px solid rgba(255,255,255,.09); box-shadow: var(--shadow), 0 0 80px rgba(198,255,0,.14); }
+.outro .pill { font-size: 46px; padding: 26px 54px; }
+.outro p { font: 600 40px "Poppins"; color: var(--muted); }

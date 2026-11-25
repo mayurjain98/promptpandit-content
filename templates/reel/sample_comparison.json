@@ -1,0 +1,16 @@
+{
+  "id": "sample_comparison",
+  "style": "comparison",
+  "series": "Galat vs Sahi Prompt",
+  "title": "Study plan *prompt*",
+  "galat": "Make me a study plan.",
+  "sahi": "Make a [4-week] study plan for [SSC CGL]. I can study [2 hours] a day. Split it by topic and add a weekly revision day.",
+  "verdict": "Details do. Better plan pao.",
+  "scenes": [
+    {"voice": "Galat versus sahi prompt. Study plan edition.", "voice_tts": "Ghalat versus sahi prompt. Study plan edition.", "reveal": "title"},
+    {"voice": "Most people type: make me a study plan.", "reveal": "galat"},
+    {"voice": "The AI has no idea about your exam, your time, or your deadline. So you get a generic plan.", "reveal": "galat"},
+    {"voice": "Instead, give it your exam, the number of weeks, and your daily hours. Ask for topics split by week, plus a revision day.", "reveal": "sahi"},
+    {"voice": "More details in, a better plan out.", "reveal": "verdict"}
+  ]
+}

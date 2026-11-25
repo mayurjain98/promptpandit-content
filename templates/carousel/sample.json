@@ -1,0 +1,45 @@
+{
+  "id": "sample_carousel",
+  "series": "Prompt of the Day",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Resume ke boring bullets ko *impact* mein badlo",
+      "subtitle": "Ek copy-paste prompt. Kisi bhi AI chatbot ke saath chalega."
+    },
+    {
+      "type": "content",
+      "kicker": "Problem",
+      "title": "Recruiter ko *duties* nahi, *results* chahiye",
+      "body": "Most resume bullets only list tasks. A strong bullet shows what you did, how you did it, and what changed because of it."
+    },
+    {
+      "type": "before_after",
+      "title": "Fark dekho",
+      "before": "Responsible for managing the college fest social media.",
+      "after": "Planned and posted daily Instagram content for our college fest, and coordinated a 5-member volunteer team.",
+      "why": "Action verb + what you did + scope. Use only real details from your own work."
+    },
+    {
+      "type": "prompt",
+      "title": "Ye prompt *copy* karo",
+      "prompt": "Act as a resume coach. Rewrite this bullet so it starts with a strong action verb, says what I did and how, and mentions the result.\n\nBullet: [paste your bullet]\nRole I'm applying for: [job title]\n\nDo not invent numbers. If a number would help, ask me for it.",
+      "note": "Last line important hai: AI ko fake numbers banane se roko."
+    },
+    {
+      "type": "content",
+      "kicker": "Pro tips",
+      "title": "Better result ke liye",
+      "bullets": [
+        "Ek baar mein *ek* bullet do",
+        "Job description bhi paste karo",
+        "3 versions maango, best choose karo"
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Kaam ka laga?",
+      "text": "Roz ek naya prompt. Interview, resume, study, sab ke liye."
+    }
+  ]
+}

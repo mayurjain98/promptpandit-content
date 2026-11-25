@@ -1,0 +1,11 @@
+{
+  "_comment": "Render settings for the comparison (Galat vs Sahi) Reel style. Times in seconds.",
+  "fps": 30,
+  "length_scale": 0.95,
+  "lead_in": 0.3,
+  "gap": 0.6,
+  "min_scene": 1.6,
+  "outro": 2.2,
+  "voice_volume": 1.0,
+  "music_volume": 0.25
+}

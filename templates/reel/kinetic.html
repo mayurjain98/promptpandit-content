@@ -1,0 +1,61 @@
+<!doctype html>
+<!--
+  Reel style: KINETIC TEXT
+  Spec: { style: "kinetic", series?, scenes: [ { voice, text, caption?, kicker? } ] }
+    voice    what Piper says (also the caption unless `caption` is given)
+    text     big on-screen text; *word* = lime
+    kicker   small label above the text (optional)
+-->
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../brand/brand.css">
+<link rel="stylesheet" href="reel_base.css">
+<style>
+  .series { position: absolute; top: 130px; left: 0; right: 0; text-align: center; }
+  .series .pill { font-size: 34px; }
+  .scene { position: absolute; left: 90px; right: 90px; top: 380px; height: 960px;
+           display: flex; flex-direction: column; justify-content: center; opacity: 0; }
+  .scene .kicker { font: 700 38px "Poppins"; letter-spacing: .1em; text-transform: uppercase; color: var(--lime-mid); margin-bottom: 30px; }
+  .scene h1 { line-height: 1.12; }
+  .scene h1 .w { display: inline-block; margin-right: .22em; will-change: transform; }
+  .scene h1 .w .lime { display: inline; }
+  /* Small glossy lime underline accent under each scene */
+  .scene .bar { width: 180px; height: 12px; margin-top: 46px; border-radius: 12px; background: var(--lime-grad); box-shadow: var(--glow); transform-origin: left; }
+</style></head>
+<body><div class="canvas" id="reel"></div>
+<script src="reel_base.js"></script>
+<script>
+window.STYLE = {
+  build(spec, tl, stage) {
+    stage.innerHTML = (spec.series ? `<div class="series"><span class="pill">${PP.fmt(spec.series)}</span></div>` : "") +
+      spec.scenes.map((sc, i) => {
+        // Split into words but keep *lime* groups intact.
+        const words = sc.text.match(/\S*\*[^*]+\*\S*|\S+/g) || [];
+        const len = sc.text.replace(/\*/g, "").length;
+        const size = len <= 18 ? 132 : len <= 34 ? 108 : len <= 60 ? 88 : 74;
+        return `<div class="scene" id="s${i}">
+          ${sc.kicker ? `<div class="kicker">${PP.fmt(sc.kicker)}</div>` : ""}
+          <h1 style="font-size:${size}px">${words.map(w => `<span class="w">${PP.fmt(w)}</span>`).join("")}</h1>
+          <div class="bar"></div></div>`;
+      }).join("");
+  },
+
+  update(t, spec, tl) {
+    tl.scenes.forEach((s, i) => {
+      const el = document.getElementById(`s${i}`);
+      const inK = PP.prog(t, s.start - 0.05, 0.3);
+      const outK = PP.easeInOut(PP.prog(t, s.end - 0.28, 0.28));
+      const visible = t >= s.start - 0.05 && t < s.end;
+      el.style.opacity = visible ? Math.min(inK * 3, 1) * (1 - outK) : 0;
+      el.style.transform = `translateY(${-outK * 90}px)`;
+      // Words pop in one by one.
+      el.querySelectorAll(".w").forEach((w, j) => {
+        const k = PP.easeOut(PP.prog(t, s.start + j * 0.07, 0.38));
+        w.style.opacity = k;
+        w.style.transform = `translateY(${(1 - k) * 50}px) scale(${0.86 + 0.14 * k})`;
+      });
+      const kb = PP.easeOut(PP.prog(t, s.start + 0.3, 0.5));
+      el.querySelector(".bar").style.transform = `scaleX(${kb})`;
+    });
+  },
+};
+</script></body></html>

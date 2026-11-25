@@ -1,0 +1,14 @@
+{
+  "id": "sample_kinetic",
+  "style": "kinetic",
+  "series": "Prompt of the Day",
+  "scenes": [
+    {"voice": "Ye prompt try kiya?", "voice_tts": "Yeh prompt try kiya?", "text": "Ye prompt *try* kiya?"},
+    {"voice": "Most people ask AI one vague question and get a vague answer.", "text": "Vague question = *vague answer*"},
+    {"voice": "Instead, tell it to ask you questions first.", "kicker": "The trick", "text": "Let AI *ask you* first"},
+    {"voice": "Type: before you answer, ask me three questions to understand my goal.", "kicker": "Copy this", "text": "\"Before you answer, ask me *3 questions* to understand my goal.\""},
+    {"voice": "Answer them, and the final reply fits your exact situation.", "text": "Answer them. Get a reply that *fits you*."},
+    {"voice": "Works for resumes, study plans, and interview prep.", "text": "Resume. Study plan. *Interview prep.*"},
+    {"voice": "Save this and follow Prompt Pandit for more.", "text": "Save karo, *follow* karo"}
+  ]
+}

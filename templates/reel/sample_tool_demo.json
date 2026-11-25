@@ -1,0 +1,16 @@
+{
+  "id": "sample_tool_demo",
+  "style": "tool_demo",
+  "series": "Pandit ji ka Tool",
+  "tool": "Gemini *Notebook*",
+  "site_url": "https://notebooklm.google/",
+  "sources": ["https://notebooklm.google/"],
+  "scenes": [
+    {"voice": "Pandit ji ka tool: Gemini Notebook, from Google.", "voice_tts": "Pundit ji ka tool: Gemini Notebook, from Google.", "text": "Notes se *padhai*, smart tareeke se", "scroll": 0},
+    {"voice": "Add your own notes and sources, then ask questions about them.", "text": "Sources add karo, *sawaal pucho*", "scroll": 0.2},
+    {"voice": "Its answers are grounded in the information you provide.", "text": "Answers *aapke material* se", "scroll": 0.22},
+    {"voice": "It can also make study aids, like flashcards and quizzes, from your sources.", "text": "*Flashcards* aur *quizzes*", "scroll": 0.36},
+    {"voice": "Not sure where to start? Explore its featured public notebooks.", "text": "Public notebooks *explore* karo", "scroll": 0.5},
+    {"voice": "Try it at notebook L M dot google. Save this for exam season.", "caption": "Try it at notebooklm.google. Save this for exam season.", "text": "*notebooklm.google*", "scroll": 0}
+  ]
+}
