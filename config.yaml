@@ -33,5 +33,5 @@ series:
 
 media:
   # Public raw URL base for Meta to fetch media
-  raw_base: "https://raw.githubusercontent.com/OWNER/REPO/main"
+  raw_base: "https://raw.githubusercontent.com/mayurjain98/promptpandit-content/main"
   tts_voice: models/piper/en_US-lessac-medium.onnx

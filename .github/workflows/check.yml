@@ -1,0 +1,21 @@
+# Manual health check: confirms the IG secrets work from GitHub Actions.
+# Run it from the Actions tab ("Run workflow") any time.
+name: IG check
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests python-dotenv
+      - name: Read Instagram account
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: python scripts/ig_check.py
