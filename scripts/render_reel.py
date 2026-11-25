@@ -122,14 +122,26 @@ def capture_site(url: str, out: Path, max_height: int = 7000):
 
 
 # ---------------------------------------------------------------- render ---
+def grab(page, tries: int = 3) -> bytes:
+    """Screenshot one frame; retry if headless Chrome stalls for a moment."""
+    for attempt in range(tries):
+        try:
+            return page.screenshot(type="jpeg", quality=92, timeout=15000)
+        except Exception:
+            if attempt == tries - 1:
+                raise
+            page.wait_for_timeout(500)
+
 def pick_music(seed: str):
     tracks = sorted(p for p in AUDIO_DIR.iterdir() if p.suffix in (".mp3", ".m4a", ".wav", ".aac"))
     return random.Random(seed).choice(tracks) if tracks else None
 
 
-def render(spec: dict, out_mp4: Path):
+def render(spec: dict, out_mp4: Path, lufs: float = None):
     style = spec["style"]
     cfg = json.loads((REEL_DIR / f"{style}.json").read_text())
+    if lufs is not None:
+        cfg["voice_lufs"] = lufs
     html = REEL_DIR / f"{style}.html"
     out_mp4.parent.mkdir(parents=True, exist_ok=True)
 
@@ -171,7 +183,7 @@ def render(spec: dict, out_mp4: Path):
             page.evaluate("([s, t]) => window.setup(s, t)", [spec, tl])
             for f in range(n_frames):
                 page.evaluate(f"window.seek({f / tl['fps']:.4f})")
-                ff.stdin.write(page.screenshot(type="jpeg", quality=92))
+                ff.stdin.write(grab(page))
                 if f % (tl["fps"] * 5) == 0:
                     print(f"  frames {f}/{n_frames}", end="\r", flush=True)
             b.close()
@@ -207,5 +219,11 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("spec")
     ap.add_argument("out")
+    # Optional one-off overrides (default: values from config.yaml / style json)
+    ap.add_argument("--voice", help="Kokoro voice, e.g. hf_alpha, hm_psi")
+    ap.add_argument("--speed", type=float, help="speech speed, e.g. 1.35")
+    ap.add_argument("--lufs", type=float, help="voice loudness target, e.g. -12")
     a = ap.parse_args()
-    render(json.loads(Path(a.spec).read_text()), Path(a.out))
+    if a.voice: TTS["voice"] = a.voice
+    if a.speed: TTS["speed"] = a.speed
+    render(json.loads(Path(a.spec).read_text()), Path(a.out), lufs=a.lufs)
