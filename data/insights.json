@@ -9,8 +9,32 @@
       "topic": "Perplexity for assignment research",
       "hook": "Assignment ke liye research karni hai?",
       "style": "tool_demo",
+      "snapshots": {
+        "24h": {
+          "reach": 75,
+          "views": 89,
+          "likes": 2,
+          "comments": 0,
+          "saved": 2,
+          "shares": 0,
+          "total_interactions": 4,
+          "ig_reels_avg_watch_time": 2855,
+          "fetched_at": "2026-11-26T18:17:28.299290+00:00",
+          "age_hours": 28.0
+        }
+      }
+    },
+    "2026-11-26_carousel_chapter-to-revision-notes-and-mcqs-promp": {
+      "media_id": "18136592587777265",
+      "type": "carousel",
+      "permalink": "https://www.instagram.com/p/DgNZOqWDibI/",
+      "published_at": "2026-11-26T15:10:02.710090+00:00",
+      "series": "Prompt of the Day",
+      "topic": "Chapter to revision notes and MCQs prompt",
+      "hook": "Chapter ko revision notes mein badlo",
+      "style": "carousel",
       "snapshots": {}
     }
   },
-  "updated_at": "2026-11-26T01:53:06.762777+00:00"
+  "updated_at": "2026-11-26T18:17:28.299290+00:00"
 }
