@@ -1,17 +1,18 @@
 # Daily publisher: posts whatever is due in content/queue/schedule.json.
-# IST = UTC + 5:30
-#   Reel     13:00 IST = 07:30 UTC   (catch-up 09:00 UTC)
-#   Carousel 19:30 IST = 14:00 UTC   (catch-up 15:30 UTC)
-# GitHub can delay scheduled runs; the catch-up runs publish anything still due.
+# IST = UTC + 5:30.  Reel 13:00 IST = 07:30 UTC, carousel 19:30 IST = 14:00 UTC.
+#
+# GitHub's scheduled runs are best-effort: they can be hours late or skipped.
+# So we check every 20 minutes from 12:40 to 23:20 IST (at :10/:30/:50, away
+# from the busy top of the hour). A run with nothing due exits in seconds, and
+# an item is never posted twice, so extra runs are harmless.
+# Backup: an outside scheduler also starts this workflow at 13:00 and 19:30 IST
+# (see README, "Backup trigger").
 # Pause any time by committing an empty file at data/pause.flag.
 name: Publish
 
 on:
   schedule:
-    - cron: "30 7 * * *"
-    - cron: "0 9 * * *"
-    - cron: "0 14 * * *"
-    - cron: "30 15 * * *"
+    - cron: "10,30,50 7-17 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -36,6 +37,8 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main   # latest main at run time, so a queued run sees earlier posts
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"

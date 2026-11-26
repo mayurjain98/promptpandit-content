@@ -1,5 +1,6 @@
 # Daily: save 24h and 7-day metrics for every published post -> data/insights.json
 # 18:30 UTC = 00:00 IST
+# Also opens an Issue if any post is 2+ hours past its slot and still not posted.
 name: Insights
 
 on:
@@ -9,6 +10,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: data-commit
@@ -20,19 +22,27 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install requests
+      - run: pip install requests pyyaml
       - name: Fetch insights
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
         run: python scripts/insights.py
+      - name: Check for overdue posts
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/publish.py --check-overdue
       - name: Commit
         run: |
           git config user.name "promptpandit-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/insights.json
+          git add data/insights.json content/queue/schedule.json
           if git diff --cached --quiet; then echo "No changes."; exit 0; fi
           git commit -m "Insights $(date -u +%Y-%m-%d)"
           for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done

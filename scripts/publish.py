@@ -14,7 +14,11 @@ Rules
     whether it actually went live, and log that.
   * After publishing: log id, permalink, time; move the folder to
     content/published/.
+  * Before posting, the account's latest posts are checked for the same
+    caption, so a duplicate run can never post the same item twice.
   * Two consecutive failed runs -> open a GitHub Issue (you get an email).
+  * --check-overdue (run daily by insights.yml): open an Issue if anything
+    is more than 2 hours past its slot and still not posted.
 
 Env: IG_ACCESS_TOKEN, IG_USER_ID, (in Actions) GITHUB_TOKEN, GITHUB_REPOSITORY
 
@@ -22,6 +26,7 @@ Usage:
   python scripts/publish.py                 publish everything that's due (max 2 per run)
   python scripts/publish.py --dry-run --id ITEM_ID
         create containers and wait for FINISHED, but DON'T publish (safe test)
+  python scripts/publish.py --check-overdue
 """
 import argparse
 import json
@@ -29,7 +34,7 @@ import os
 import shutil
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import requests
@@ -47,6 +52,7 @@ TOKEN = os.getenv("IG_ACCESS_TOKEN", "")
 IG_ID = os.getenv("IG_USER_ID", "")
 MEDIA_BASE = CONFIG["media"]["raw_base"].rstrip("/")
 MAX_PER_RUN = 2
+OVERDUE_AFTER = timedelta(hours=2)
 
 
 class IGError(Exception):
@@ -165,13 +171,41 @@ def open_issue(title: str, body: str):
     print(f"  opened GitHub issue: HTTP {r.status_code}")
 
 
+def check_overdue() -> int:
+    """Open one Issue listing items more than 2 hours past their slot."""
+    schedule = load_json(SCHEDULE, {"items": []})
+    done = {e["id"] for e in load_json(LOG, []) if e.get("status") == "published"}
+    now = datetime.now(timezone.utc)
+    late = [i for i in schedule["items"]
+            if i.get("status") == "queued" and i["id"] not in done and not i.get("overdue_alerted")
+            and now - datetime.fromisoformat(i["publish_at_utc"]) > OVERDUE_AFTER]
+    if not late:
+        print("Nothing overdue.")
+        return 0
+    lines = []
+    for i in late:
+        hrs = (now - datetime.fromisoformat(i["publish_at_utc"])).total_seconds() / 3600
+        lines.append(f"- `{i['id']}`: due {i['publish_at_ist']}, {hrs:.1f} h overdue")
+        i["overdue_alerted"] = True   # alert once per item
+    print("\n".join(lines))
+    open_issue("Instagram post overdue",
+               "These posts are more than 2 hours past their slot:\n\n" + "\n".join(lines) +
+               "\n\nThe publish runs probably didn't start. Post now: Actions > Publish > "
+               "Run workflow, untick dry run, enter the item id.")
+    save_json(SCHEDULE, schedule)
+    return 0
+
+
 # ---------------------------------------------------------------- main ----
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true", help="create containers, don't publish")
     ap.add_argument("--id", help="only this item (ignores its time)")
+    ap.add_argument("--check-overdue", action="store_true", help="alert if a post is 2+ hours late")
     a = ap.parse_args()
 
+    if a.check_overdue:
+        return 0 if PAUSE.exists() else check_overdue()
     if PAUSE.exists():
         print("pause.flag found: skipping.")
         return 0
@@ -206,12 +240,29 @@ def main():
         print(f"\n== {item['id']} ({item['type']}){'  [DRY RUN]' if a.dry_run else ''}")
         entry = {"id": item["id"], "type": item["type"], "time_utc": now.isoformat()}
         try:
+            # Duplicate guard: if this caption is already on the account (e.g. two
+            # runs overlapped), record it as published instead of posting again.
+            already = None if a.dry_run else latest_post_matching(item["caption"])  # also returns timestamp
+            if already:
+                print(f"  already live on Instagram ({already.get('permalink')}): logging, not reposting")
+                res = {"media_id": already["id"], "permalink": already.get("permalink")}
+                entry |= {"status": "published", **res, "published_at": datetime.strptime(already["timestamp"], "%Y-%m-%dT%H:%M:%S%z").isoformat(),
+                          "note": "found already live; not reposted"}
+                item["status"] = "published"
+                item["permalink"] = res["permalink"]
+                move_to_published(item["id"])
+                item["files"] = [f.replace("content/queue/", "content/published/", 1) for f in item["files"]]
+                log.append(entry)
+                continue
             cid = build_container(item)
             if a.dry_run:
                 print(f"  DRY RUN OK: container {cid} is FINISHED. Not published.")
                 continue
             res = publish_container(cid, item["caption"])
-            entry |= {"status": "published", **res, "published_at": datetime.now(timezone.utc).isoformat()}
+            posted = datetime.now(timezone.utc)
+            late_min = round((posted - datetime.fromisoformat(item["publish_at_utc"])).total_seconds() / 60)
+            entry |= {"status": "published", **res, "published_at": posted.isoformat(),
+                      "late_by_min": max(late_min, 0)}
             item["status"] = "published"
             item["permalink"] = res.get("permalink")
             print(f"  PUBLISHED: {res.get('permalink')}")

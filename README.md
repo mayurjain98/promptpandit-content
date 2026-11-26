@@ -14,12 +14,25 @@ Claude Code writes and renders the week on your Mac, and GitHub Actions publishe
 | When | Where | What |
 |---|---|---|
 | Weekly (you) | Mac, `/weekly` | research → write → fact-check → render → QA → `content/queue/schedule.json` |
-| 13:00 / 19:30 IST | `publish.yml` | posts due items, logs to `data/publish_log.json`, moves files to `content/published/` |
-| Daily 00:00 IST | `insights.yml` | 24-hour and 7-day metrics → `data/insights.json` (used by the next `/weekly`) |
+| Every 20 min, 12:40–23:20 IST | `publish.yml` | posts due items (never twice), logs to `data/publish_log.json`, moves files to `content/published/` |
+| 13:01 / 19:31 IST | backup trigger (cron-job.org) | starts `publish.yml` on time in case GitHub's own schedule is late |
+| Daily 00:00 IST | `insights.yml` | 24-hour and 7-day metrics → `data/insights.json` (used by the next `/weekly`); Issue if a post is 2+ h overdue |
 | Mondays | `token.yml` | checks the IG token; opens an Issue if something's wrong |
 | 1st of month | `cleanup.yml` | deletes media files of posts older than 30 days (logs kept) |
 
 Two failed publishing runs in a row open a GitHub Issue, and GitHub emails you about it.
+
+## Backup trigger
+GitHub's scheduled runs are best-effort (they can be hours late or skipped), so an outside scheduler also starts the publisher.
+1. GitHub → Settings → Developer settings → Fine-grained tokens → **Generate**. Repository access: only `promptpandit-content`.
+   Permissions: **Actions: Read and write** (nothing else). Note its expiry date and renew it before then.
+2. On [cron-job.org](https://cron-job.org) (free), create two jobs, timezone **Asia/Kolkata**, at **13:01** and **19:31** daily:
+   - URL: `https://api.github.com/repos/mayurjain98/promptpandit-content/actions/workflows/publish.yml/dispatches`
+   - Method **POST**. Headers: `Authorization: Bearer <your token>`, `Accept: application/vnd.github+json`, `Content-Type: application/json`
+   - Body: `{"ref":"main","inputs":{"dry_run":"false"}}`
+3. "Test run" should return **HTTP 204**, and a Publish run appears in the Actions tab. If nothing is due, it just says "Nothing due".
+
+The token lives only at cron-job.org; never put it in this repo. If it leaks, delete it on GitHub: it can only start workflows in this repo.
 
 ## Setup (already done once)
 - **Local tools:** Python 3 + `.venv` (`pip install -r requirements.txt`, `playwright install chromium`), FFmpeg,
