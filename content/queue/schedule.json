@@ -51,17 +51,18 @@
       "publish_at_ist": "2026-11-27T19:30:00+05:30",
       "publish_at_utc": "2026-11-27T14:00:00+00:00",
       "files": [
-        "content/queue/2026-11-27_carousel_khanmigo-ai-tutor-that-guides-without-di/slide_01.jpg",
-        "content/queue/2026-11-27_carousel_khanmigo-ai-tutor-that-guides-without-di/slide_02.jpg",
-        "content/queue/2026-11-27_carousel_khanmigo-ai-tutor-that-guides-without-di/slide_03.jpg",
-        "content/queue/2026-11-27_carousel_khanmigo-ai-tutor-that-guides-without-di/slide_04.jpg",
-        "content/queue/2026-11-27_carousel_khanmigo-ai-tutor-that-guides-without-di/slide_05.jpg",
-        "content/queue/2026-11-27_carousel_khanmigo-ai-tutor-that-guides-without-di/slide_06.jpg",
-        "content/queue/2026-11-27_carousel_khanmigo-ai-tutor-that-guides-without-di/slide_07.jpg"
+        "content/published/2026-11-27_carousel_khanmigo-ai-tutor-that-guides-without-di/slide_01.jpg",
+        "content/published/2026-11-27_carousel_khanmigo-ai-tutor-that-guides-without-di/slide_02.jpg",
+        "content/published/2026-11-27_carousel_khanmigo-ai-tutor-that-guides-without-di/slide_03.jpg",
+        "content/published/2026-11-27_carousel_khanmigo-ai-tutor-that-guides-without-di/slide_04.jpg",
+        "content/published/2026-11-27_carousel_khanmigo-ai-tutor-that-guides-without-di/slide_05.jpg",
+        "content/published/2026-11-27_carousel_khanmigo-ai-tutor-that-guides-without-di/slide_06.jpg",
+        "content/published/2026-11-27_carousel_khanmigo-ai-tutor-that-guides-without-di/slide_07.jpg"
       ],
       "caption": "Ek AI tutor jo seedha answer nahi deta 🤔\n\nKhanmigo, Khan Academy ka AI tutor, aapko khud sochne aur problem solve karne mein guide karta hai. Algebra, SQL ya essay writing, sab mein.\n\nAvailability aur price site pe zaroor check karo. Aapko hints pasand hain ya direct answers? 👇\n\nSave karo, follow karo @promptpandit.in\n\nSource: khanmigo.ai (official site)\n\n#khanmigo #khanacademy #aitools #aiforstudents #studytips #promptpandit",
       "qa_passed": true,
-      "status": "queued"
+      "status": "published",
+      "permalink": "https://www.instagram.com/p/DgQNqviDYiQ/"
     },
     {
       "id": "2026-11-28_reel_explain-like-a-beginner-plus-example-plu",
