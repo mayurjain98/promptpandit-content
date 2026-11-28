@@ -33,8 +33,44 @@
       "topic": "Chapter to revision notes and MCQs prompt",
       "hook": "Chapter ko revision notes mein badlo",
       "style": "carousel",
+      "snapshots": {
+        "24h": {
+          "reach": 49,
+          "views": 75,
+          "likes": 2,
+          "comments": 0,
+          "saved": 0,
+          "shares": 0,
+          "total_interactions": 4,
+          "follows": 0,
+          "profile_visits": 0,
+          "fetched_at": "2026-11-28T01:33:44.793042+00:00",
+          "age_hours": 34.4
+        }
+      }
+    },
+    "2026-11-27_reel_tell-me-about-yourself-interview-answer-": {
+      "media_id": "17914992072592050",
+      "type": "reel",
+      "permalink": "https://www.instagram.com/reel/DgPdVUuzWHC/",
+      "published_at": "2026-11-27T10:24:57.180787+00:00",
+      "series": "Galat vs Sahi Prompt",
+      "topic": "Tell me about yourself interview answer prompt",
+      "hook": "Interview ka sabse common sawaal",
+      "style": "comparison",
+      "snapshots": {}
+    },
+    "2026-11-27_carousel_khanmigo-ai-tutor-that-guides-without-di": {
+      "media_id": "18021159602971339",
+      "type": "carousel",
+      "permalink": "https://www.instagram.com/p/DgQNqviDYiQ/",
+      "published_at": "2026-11-27T17:26:54.982843+00:00",
+      "series": "Pandit ji ka Tool",
+      "topic": "Khanmigo AI tutor that guides without direct answers",
+      "hook": "AI tutor jo seedha answer nahi deta",
+      "style": "carousel",
       "snapshots": {}
     }
   },
-  "updated_at": "2026-11-27T01:51:38.406654+00:00"
+  "updated_at": "2026-11-28T01:33:44.793042+00:00"
 }
