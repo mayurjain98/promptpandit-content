@@ -70,11 +70,12 @@
       "publish_at_ist": "2026-11-28T13:00:00+05:30",
       "publish_at_utc": "2026-11-28T07:30:00+00:00",
       "files": [
-        "content/queue/2026-11-28_reel_explain-like-a-beginner-plus-example-plu/reel.mp4"
+        "content/published/2026-11-28_reel_explain-like-a-beginner-plus-example-plu/reel.mp4"
       ],
       "caption": "Koi topic samajh nahi aa raha? 🧠\n\n3-step prompt:\n1. Explain like I'm a beginner\n2. Give one real-life example from India\n3. Ask me 3 questions to check if I understood\n\nKaunsa topic try karoge? 👇\n\nSave karo, follow karo @promptpandit.in\n\n#studytips #promptengineering #aiforstudents #learning #chatgptprompts #promptpandit",
       "qa_passed": true,
-      "status": "queued"
+      "status": "published",
+      "permalink": "https://www.instagram.com/reel/DgSpdttuqgk/"
     },
     {
       "id": "2026-11-28_carousel_linkedin-headline-for-students-and-fresh",
@@ -82,17 +83,18 @@
       "publish_at_ist": "2026-11-28T19:30:00+05:30",
       "publish_at_utc": "2026-11-28T14:00:00+00:00",
       "files": [
-        "content/queue/2026-11-28_carousel_linkedin-headline-for-students-and-fresh/slide_01.jpg",
-        "content/queue/2026-11-28_carousel_linkedin-headline-for-students-and-fresh/slide_02.jpg",
-        "content/queue/2026-11-28_carousel_linkedin-headline-for-students-and-fresh/slide_03.jpg",
-        "content/queue/2026-11-28_carousel_linkedin-headline-for-students-and-fresh/slide_04.jpg",
-        "content/queue/2026-11-28_carousel_linkedin-headline-for-students-and-fresh/slide_05.jpg",
-        "content/queue/2026-11-28_carousel_linkedin-headline-for-students-and-fresh/slide_06.jpg",
-        "content/queue/2026-11-28_carousel_linkedin-headline-for-students-and-fresh/slide_07.jpg"
+        "content/published/2026-11-28_carousel_linkedin-headline-for-students-and-fresh/slide_01.jpg",
+        "content/published/2026-11-28_carousel_linkedin-headline-for-students-and-fresh/slide_02.jpg",
+        "content/published/2026-11-28_carousel_linkedin-headline-for-students-and-fresh/slide_03.jpg",
+        "content/published/2026-11-28_carousel_linkedin-headline-for-students-and-fresh/slide_04.jpg",
+        "content/published/2026-11-28_carousel_linkedin-headline-for-students-and-fresh/slide_05.jpg",
+        "content/published/2026-11-28_carousel_linkedin-headline-for-students-and-fresh/slide_06.jpg",
+        "content/published/2026-11-28_carousel_linkedin-headline-for-students-and-fresh/slide_07.jpg"
       ],
       "caption": "Aapki LinkedIn headline kya kehti hai? 💼\n\n'Student at XYZ College' se kaam nahi chalega. Role + skills + kya dhoondh rahe ho, ye likho. Aur prompt last slide se pehle hai, copy karo.\n\nApni headline comment mein daalo, feedback denge 👇\n\nSave karo, follow karo @promptpandit.in\n\n#linkedin #linkedintips #freshers #jobsearch #personalbranding #promptpandit",
       "qa_passed": true,
-      "status": "queued"
+      "status": "published",
+      "permalink": "https://www.instagram.com/p/DgSpmPupRar/"
     },
     {
       "id": "2026-11-29_reel_napkin-ai-turns-text-into-diagrams-and-v",
